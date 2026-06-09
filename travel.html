@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel</title>
+<link rel="stylesheet" href="./styles/styles.css">
+<link rel="stylesheet" href="./styles/styles-travel.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+ <div class="content2">
+    <div class="zastavka" style="--bg: url('/images/image3.png');">
+        <div class="content">
+        <header>
+            <img class="logo" src="/images/logo.png" alt="Logo">
+
+            <img class="burger" src="/images/Burger.png" alt="menu">
+
+            <nav class="nav">
+                <a class="nav__link" href="index.html">Главная</a>
+                <a class="nav__link" href="information.html">Информация</a>
+                <a class="nav__link" href="coach.html">Тренера</a>
+                <a class="nav__link" href="gallery.html">Галерея</a>
+                <a class="nav__link" href="commerce.html">Коммерция</a>
+                <a class="nav__link" href="events.html">Мероприятия</a>
+                <a class="nav__link" href="merch.html">Мерч</a>
+            </nav>
+        </header>
+        <div class="zastavka2">
+            <div class="zastavka-text">
+                <h1>ПУТЕШЕСТВИЯ</h1>
+                <h2>“NEEDLES” принимают участие в различных<br>
+                соревнованиях международного уровня.</h2>
+            </div>
+
+            <div class="socials">
+                <a href="#" class="social insta"></a>
+                <a href="#" class="social tg"></a>
+                <a href="#" class="social pin"></a>
+                <a href="#" class="social wa"></a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="content travel-margin">
+        <h3>НА МЕЖДУНАРОДНОЙ<br class="mobile-br"> АРЕНЕ</h3>
+        <p class="text-all text-width">
+            За 11 лет существования команды нам посчастливилось побывать почти в 12 странах. 
+            В каждой из них мы выходили на соревновательную арену — и возвращались с призовыми местами. 
+            <br>Побед было немало, и каждая из них стала частью нашей общей истории.
+            <br>Знакомим и вас с географией наших достижений...
+        </p>
+    </div>
+
+    <div class="content">
+        <div class="travel-map-scroll">
+            <div class="travel-map-block" id="travelMapBlock">
+                <div class="world-map"></div>
+                <div id="markers"></div>
+
+                <!-- Модальное окно -->
+                <div class="modal-overlay" id="modalOverlay">
+                    <button class="close-button" id="closeModal">&times;</button>
+                    <div class="modal-content" id="modalContent">
+                        <!-- Контент будет создан динамически через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content">
+        <div class="travel-content">
+            <p class="text-all text-travel-width">Хотите вместе с нами изучать мир?<br>Выступать на международной арене?</p>
+            <button class="btn-travel">Хочу к вам!</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="content">
+            <div class="footer-colum footer-left">
+                <h4>СВЯЖИТЕСЬ С НАМИ</h4>
+                <div class="footer-stroke">
+                    <div class="footer-colum">
+                        <p class="footer-text">+7602522232000322</p>
+                        <p class="footer-text">+7602522232000322</p>
+                        <p class="footer-text address-desktop">Адрес: Санкт-Петербург, ул. Больая Морская, д. 18</p>
+                    </div>
+                    <div class="footer-colum footer-right">
+                       <div class="socials">
+                            <a href="#"><img src="/images/inst.png" alt="Instagram" style="width: 48px; height: 48px;"></a>
+                            <a href="#"><img src="/images/telega.png" alt="Telegram" style="width: 48px; height: 48px;"></a>
+                            <a href="#"><img src="/images/pint.png" alt="VK" style="width: 48px; height: 48px;"></a>
+                            <a href="#"><img src="/images/what.png" alt="YouTube" style="width: 48px; height: 48px;"></a>
+                        </div>
+                        <p class="footer-text address-tablet">Адрес: Санкт-Петербург, <br class="br-mobile">ул. Больая Морская, д. 18</p>
+                        <p class="footer-text">Конфиденциальная информация_документ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="script.js"></script>
+<script src="script-travel.js"></script>
+</body>
+</html>

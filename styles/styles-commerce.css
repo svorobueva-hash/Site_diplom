@@ -1,0 +1,417 @@
+/*СТИЛИ ТОЛЬКО  ДЛЯ СТРАНИЦЫ "КОММЕРЦИЯ"*/
+
+.content4 {
+    margin: 0 auto;
+    padding: 0 108px;  
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+}
+
+/*БЕГУЩАЯ СТРОКА*/
+
+.marquee {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+}
+
+.slide {
+    width: 2809px;
+    height: 242px;
+    flex-shrink: 0;
+    margin-right: 80px;
+}
+
+
+.masked {
+    width: 100%;
+    height: 242px;
+    filter: brightness(1.1) contrast(1.2);
+
+    background: linear-gradient(
+        120deg,
+        #0a1f44,
+        #1e4fa3,
+        #6fa3ff,
+        #fff,
+        #1e4fa3,
+        #0a1f44
+    );
+    background-size: 200% 100%;
+    animation: gradientMove 6s linear infinite;
+
+    /* ВОТ ТУТ ТВОЙ SVG */
+    -webkit-mask: url("/images/PERFORMANCE PERFORMANCE.svg") no-repeat center;
+    mask: url("/images/PERFORMANCE PERFORMANCE.svg") no-repeat center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+@keyframes gradientMove {
+    from { background-position: 0% 50%; }
+    to   { background-position: 200% 50%; }
+}
+
+/*ГРАДИЕНТ ТОЛЬКО ДЛЯ ЭТОГО БЛОКА*/
+.stripe-block{
+    margin-top: 128px;
+}
+
+.stripe-text2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    margin: 0px 108px 0 108px;
+    padding-top: 32px;
+    height: 300px;
+}
+
+.text-com {
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.btn-com {
+    color: white;
+    border: 1px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 48px;
+    width: 264px;
+    align-items: center;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.btn-com:hover{
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+}
+
+.btn-com:active{
+    background: #D9D9D9;
+    color: #000;
+    border: none;
+}
+
+.stripes-commerce {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    /* Градиент — как обычно */
+    background: linear-gradient(
+        120deg,
+        #000000 0%,
+        #060015 20%,
+        #1e4fa3 40%,
+        #6fa3ff 50%,
+        #1e4fa3 65%,
+        #060015 80%,
+        #000000 100%);
+    background-size: 300% 100%;
+    animation: wave 14s linear infinite;
+
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-image: url("/images/stripe-commerce.svg");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    
+    mask-image: url("/images/stripe-commerce.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/*БЛОК ИНФОРМАЦИИ О КОММЕРЧЕСКОМ ВЫСТУПЛЕНИИ*/
+h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 1000px top -20px;
+    margin-bottom: 40px;
+}
+
+.commerce-info{
+    display: grid;
+    min-height: 1036px;
+    grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+    grid-template-rows: repeat(8, auto);    /* 4 строки */
+    column-gap: 24px;
+    align-items:start;
+    margin-bottom: 128px;
+}
+
+.commerce-text1{
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+.commerce-text2{
+    grid-row: 2;
+    grid-column: 1 / 4;
+    margin-top: 28px;
+}
+
+.btn-zakaz {
+    color: #000;
+    border: none;
+    background: #D3E5FF;
+    cursor: pointer;
+    margin-top: 36px;
+    width: 264px;
+    align-items: center;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 300;
+    grid-row: 3;
+    grid-column: 1 / 4;
+}
+
+.btn-zakaz:hover{
+    background: #6FA9E5;
+    color: #fff;
+}
+
+.btn-zakaz:active{
+    background: transparent;
+    color: #6FA9E5;
+    border: 1px solid #6FA9E5;
+}
+
+.commerce-image{
+    max-width: 409px;
+    width: 100%;
+    height: 256px;
+    object-fit:cover;
+}
+
+.commerce-image1{
+    max-width: 409px;
+    width: 100%;
+    height: 256px;
+    object-fit:cover;
+}
+
+.var1{
+    grid-column: 4 / 7;
+    grid-row: 1 / 2;
+}
+
+.commerce-text3{
+    grid-row: 2 / 4;
+    grid-column: 4 / 7;
+    margin-top: 24px;
+}
+
+.commerce-image2{
+    max-width: 840px;
+    width: 100%;
+    height: 476px;
+    object-fit:cover;
+}
+
+.var2{
+    grid-column: 7 / 13;
+    grid-row: 1 / 4;
+}
+
+.commerce-image3{
+    grid-column: 1 / 7;
+    grid-row: 4 / 8;
+    max-width: 840px;
+    width: 100%;
+    height: 536px;
+    object-fit:cover;
+    margin-top: 24px;
+}
+
+.commerce-text4{
+    grid-row: 4 / 6;
+    grid-column: 7 / 10;
+    margin-top: 24px;
+}
+
+.commerce-text5{
+    grid-row: 7 / 8;
+    grid-column: 7 / 10;
+    margin-top: 28px;
+}
+
+.var3{
+    grid-column: 10 / 13;
+    grid-row: 4 / 6;
+    margin-top: 24px;
+}
+
+.var4{
+    grid-column: 10 / 13;
+    grid-row: 6 / 8;
+    margin-top: 24px;
+}
+
+
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    h3{
+        font-size: 64px;
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 880px top -24px;
+        margin-bottom: 40px;
+    }
+
+    .commerce-image{
+        min-height: 256px;
+        height: 90%;
+    }
+
+    .commerce-image2{
+        min-height: 476px;
+        height: 100%;
+    }
+
+    .commerce-image3{
+        min-height: 536px;
+        height: 100%;
+        margin-top: 24px;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) and (max-width: 1739px) {
+    .content4 {
+        margin: 0 auto;
+        padding: 0 64px;  
+    }
+
+    .stripe-text2{
+        margin: 0px 64px 0 64px;
+        padding-top: 32px;
+    }
+
+
+    h3 {
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 780px top -18px;
+        margin-bottom: 32px;
+    }
+
+    .commerce-info{
+        min-height: 1036px;
+        column-gap: 32px;
+        margin-bottom: 104px;
+    }
+
+    .commerce-text1{
+        grid-row: 1/2;
+        grid-column: 1 / 7;
+    }
+
+    .commerce-text2{
+        grid-row: 2;
+        grid-column: 1 / 7;
+        margin-top: 28px;
+    }
+
+    .btn-zakaz {
+        margin-top: 32px;
+        grid-row: 4 / 5;
+        grid-column: 1 / 7;
+    }
+
+    .commerce-image1{
+        min-width: 580px;
+        max-width: none;
+        width: 100%;
+        height: 433px;
+    }
+
+    .var1{
+        grid-column: 7 / 13;
+        grid-row: 1 / 5;
+    }
+
+    .commerce-text3{
+        grid-row: 3;
+        grid-column: 1 / 7;
+        margin-top: 24px;
+    }
+
+    .commerce-image2{
+        min-width: 800px;
+        max-width: none;
+        width: 100%;
+        height: 505px;
+    }
+
+    .var2{
+        grid-column: 1 / 9;
+        grid-row: 5 / 7;
+        margin-top: 24px;
+    }
+
+    .commerce-image3{
+        grid-column: 9 / 13;
+        grid-row: 5;
+        min-width: 360px;
+        width: 100%;
+        height: 269px;
+        margin-top: 24px;
+    }
+
+    .commerce-text4{
+        grid-row: 6;
+        grid-column: 9 / 13;
+        margin-top: 16px;
+    }
+
+    .commerce-text5{
+        grid-row: 7 / 8;
+        grid-column: 9 / 13;
+        margin-top: 28px;
+    }
+
+    .commerce-image{
+        min-width: 400px;
+        max-width: none;
+        width: 100%;
+        height: 256px;
+    }
+
+    .var3{
+        grid-column: 1 / 5;
+        grid-row: 7 / 8;
+        margin-top: 24px;
+    }
+
+    .var4{
+        grid-column: 5 / 9;
+        grid-row: 7 / 8;
+        margin-top: 24px;
+    }
+}

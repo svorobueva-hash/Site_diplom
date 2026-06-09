@@ -1,0 +1,630 @@
+/*СТИЛИ ДЛЯ СТРАНИЦЫ ТРЕНЕРОВ*/
+
+
+.content4 {
+    margin: 0 auto;
+    padding: 0 108px;  
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.coach-h3 h3{
+    font-size: 72px;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 836px top -20px;
+    color: #fff;
+    flex-shrink: 0; 
+    font-weight: 300;
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.coach-h3-v h3{
+    font-size: 72px;
+    margin: 0;
+    color: #fff;
+    flex-shrink: 0; 
+    font-weight: 300;
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.coach-h3-a h3{
+    font-size: 72px;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 872px top -20px;
+    color: #fff;
+    flex-shrink: 0; 
+    font-weight: 300;
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.about-coach{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+    grid-template-rows: repeat(6, auto);    /* 4 строки */
+    column-gap: 24px;
+    align-items:start;
+}
+
+/*ДА И АЮ*/
+.ch-image{
+    max-width: 552px;
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+}
+
+.img1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 7;
+}
+
+.var1{
+    grid-column: 5 / 13;
+    grid-row: 1;
+}
+
+.var2{
+    grid-column: 5 / 13;
+    grid-row: 2;
+    margin-top: 24px;
+}
+
+.var3{
+    grid-column: 5 / 13;
+    grid-row: 3;
+    margin-top: 24px;
+}
+
+.var4{
+    grid-column: 5 / 13;
+    grid-row: 4;
+    margin-top: 24px;
+}
+
+.var5{
+    grid-column: 5 / 13;
+    grid-row: 5;
+    margin-top: 24px;
+}
+
+.var6{
+    grid-column: 5 / 13;
+    grid-row: 6;
+    margin-top: 160px;
+}
+
+.text-ch{
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/*БЕГУЩАЯ СТРОКА*/
+
+.marquee {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+}
+
+.slide {
+    width: 2157px;
+    height: 242px;
+    flex-shrink: 0;
+    margin-right: 80px;
+}
+
+
+.masked {
+    width: 100%;
+    height: 242px;
+    filter: brightness(1.1) contrast(1.2);
+
+    background: linear-gradient(
+        120deg,
+        #0a1f44,
+        #1e4fa3,
+        #6fa3ff,
+        #fff,
+        #1e4fa3,
+        #0a1f44
+    );
+    background-size: 200% 100%;
+    animation: gradientMove 6s linear infinite;
+
+    /* ВОТ ТУТ ТВОЙ SVG */
+    -webkit-mask: url("/images/COACH COACH COACH.svg") no-repeat center;
+    mask: url("/images/COACH COACH COACH.svg") no-repeat center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+@keyframes gradientMove {
+    from { background-position: 0% 50%; }
+    to   { background-position: 200% 50%; }
+}
+
+
+/*ВА*/
+
+.img2{
+    grid-column: 9 / 13;
+    grid-row: 1 / 7;
+}
+
+.var1-v{
+    grid-column: 1 / 9;
+    grid-row: 1;
+}
+
+.var2-v{
+    grid-column: 1 / 9;
+    grid-row: 2;
+    margin-top: 24px;
+}
+
+.var3-v{
+    grid-column: 1 / 9;
+    grid-row: 3;
+    margin-top: 24px;
+}
+
+.var4-v{
+    grid-column: 1 / 9;
+    grid-row: 4;
+    margin-top: 24px;
+}
+
+.var5-v{
+    grid-column: 1 / 9;
+    grid-row: 5;
+    margin-top: 24px;
+}
+
+.var6-v{
+    grid-column: 1 / 9;
+    grid-row: 6;
+    margin-top: 160px;
+}
+
+
+
+.btn-ch {
+    color: white;
+    border: 1px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 32px;
+    width: 264px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: auto;
+}
+
+.btn-ch:hover{
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+}
+
+.btn-ch:active{
+    background: #D9D9D9;
+    color: #000;
+    border: none;
+}
+
+.coach-slider-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0 40px 0;
+}
+
+.coach-slider-frame {
+  width: 1704px;
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.coach-slider {
+  width: 100%;
+  overflow: visible;
+}
+
+.coach-slider .swiper-wrapper {
+  align-items: stretch;
+}
+
+.coach-slider .swiper-slide {
+  height: 256px;
+}
+
+.coach-slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.coach-text-slide {
+    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 256px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.coach-text-slide p {
+    margin: 0;
+}
+
+/*МЛАДШИЕ ТРЕНЕРА*/
+
+.junior-slider-section {
+    padding-bottom: 0px;
+}
+
+.junior-slider {
+    overflow: visible;
+}
+
+.junior-slide {
+    display: flex !important;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.junior-slide img {
+    width: 264px;
+    height: 340px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.junior-info {
+    color: #fff;
+}
+
+.junior-info h4 {
+    margin: 0 0 24px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.little-coach{
+    margin-bottom: 40px;
+}
+
+
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    .content4 {
+        margin: 0 auto;
+        padding: 0 112px;  
+    }
+
+    .coach-h3 h3 {
+        font-size: 64px;
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 720px top -24px;
+    }
+
+    .coach-h3-v h3{
+        font-size: 64px;
+    }
+
+    .coach-h3-a h3 {
+        font-size: 64px;
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 764px top -24px;
+    }
+}
+
+
+@media (min-width: 1440px) and (max-width: 1739px) {
+    .content4 {
+        margin: 0 auto;
+        padding: 0 64px;  
+    }
+
+    .marquee {
+        margin-top: 56px;
+        margin-bottom: 64px;
+    }
+
+    .slide {
+        width: 1898px;
+        height: 213px;
+        flex-shrink: 0;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 213px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/COACH COACH COACH2.svg") no-repeat center;
+        mask: url("/images/COACH COACH COACH2.svg") no-repeat center;
+    }
+
+    .coach-h3 h3 {
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 640px top -18px;
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .coach-h3-v h3{
+        font-size: 56px;
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .coach-h3-a h3 {
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 680px top -18px;
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .text-ch{
+        font-size: 24px;
+    }
+
+    .ch-image{
+        max-width: 528px;
+        width: 100%;
+        height: 668px;
+        object-fit: cover;
+    }
+
+    .little-coach{
+        margin-bottom: 32px;
+    }
+
+    .junior-info h4 {
+        margin: 0 0 24px;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .junior-slide img {
+        width: 240px;
+        height: 360px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .coach-text-slide {
+        height: 360px;
+        font-size: 20px;
+    }
+
+    .junior-slide {
+        display: flex !important;
+        gap: 32px;
+        align-items: flex-start;
+    }
+
+    .coach-slider .swiper-slide {
+        height: 264px;
+    }
+
+    .coach-slider-frame {
+    width: 1600px;
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    }
+}
+
+
+@media (min-width: 1194px) and (max-width: 1439px)  {
+    .content4 {
+        margin: 0 auto;
+        padding: 0 49px;  
+    }
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 2197px;
+        height: 184px;
+        flex-shrink: 0;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 184px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/COACH COACH COACH COACH3.svg") no-repeat center;
+        mask: url("/images/COACH COACH COACH COACH3.svg") no-repeat center;
+    }
+
+    .coach-h3 h3 {
+        font-size: 48px;
+        background-size: 136px;
+        background-position: left 548px top -12px;
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .coach-h3-v h3{
+        font-size: 56px;
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .coach-h3-a h3 {
+        font-size: 48px;
+        background-size: 136px;
+        background-position: left 580px top -12px;
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .text-ch{
+        font-size: 22px;
+    }
+
+    .ch-image{
+        max-width: 528px;
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+    }
+
+    .little-coach{
+        margin-bottom: 32px;
+    }
+
+    .junior-info h4 {
+        margin: 0 0 24px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .junior-slide img {
+        width: 240px;
+        height: 360px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .coach-text-slide {
+        height: 360px;
+        font-size: 18px;
+    }
+
+    .junior-slide {
+        display: flex !important;
+        gap: 32px;
+        align-items: flex-start;
+    }
+
+    .coach-slider .swiper-slide {
+        height: 230px;
+    }
+
+    .coach-slider-frame {
+        width: 1180px;
+        max-width: none;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .img1{
+        grid-column: 1 / 6;
+        grid-row: 1 / 7;
+    }
+
+    .var1{
+        grid-column: 6 / 13;
+        grid-row: 1;
+    }
+
+    .var2{
+        grid-column: 6 / 13;
+        grid-row: 2;
+        margin-top: 24px;
+    }
+
+    .var3{
+        grid-column: 6 / 13;
+        grid-row: 3;
+        margin-top: 24px;
+    }
+
+    .var4{
+        grid-column: 6 / 13;
+        grid-row: 4;
+        margin-top: 24px;
+    }
+
+    .var5{
+        grid-column: 6 / 13;
+        grid-row: 5;
+        margin-top: 24px;
+    }
+
+    .var6{
+        grid-column: 6 / 13;
+        grid-row: 6;
+        margin-top: 112px;
+    }
+
+    .img2{
+        grid-column: 8 / 13;
+        grid-row: 1 / 7;
+    }
+
+    .var1-v{
+        grid-column: 1 / 8;
+        grid-row: 1;
+    }
+
+    .var2-v{
+        grid-column: 1 / 8;
+        grid-row: 2;
+        margin-top: 24px;
+    }
+
+    .var3-v{
+        grid-column: 1 / 8;
+        grid-row: 3;
+        margin-top: 24px;
+    }
+
+    .var4-v{
+        grid-column: 1 / 8;
+        grid-row: 4;
+        margin-top: 24px;
+    }
+
+    .var5-v{
+        grid-column: 1 / 8;
+        grid-row: 5;
+        margin-top: 24px;
+    }
+
+    .var6-v{
+        grid-column: 1 / 8;
+        grid-row: 6;
+        margin-top: 96px;
+    }
+}

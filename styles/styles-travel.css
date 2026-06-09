@@ -1,0 +1,468 @@
+/*СТИЛИ ДЛЯ СТРАНИЦЫ ПУТЕШЕСТВИЙ*/
+
+:root {
+    --highlight-color: #7BBCFE;
+    --modal-bg: rgba(5, 10, 20, 0.95);
+    --modal-text-color: #fff;
+}
+
+
+.travel-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.text-width{
+    width: 1128px;
+}
+
+.travel-margin{
+    margin-top: 124px;
+    margin-bottom: 48px;
+}
+
+h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 912px top -20px;
+    margin-bottom: 40px;
+}
+
+.mobile-br{
+    display:none;
+}
+
+.btn-travel {
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    width: 408px;
+    height: 44px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.btn-travel:hover{
+    background: #6FA9E5;
+    color: #fff;
+}
+
+.btn-travel:active{
+    background: transparent;
+    color: #6FA9E5;
+    border: 1px solid #6FA9E5;
+}
+
+
+/*КАРТА*/
+
+.travel-map-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+
+    border: 2px solid #6FA9E5;
+    border-radius: 8px;
+    background-color: #0e1c2c;
+}
+
+.travel-map-block {
+    position: relative;
+    width: 100%;
+    max-width: 1702px;
+    aspect-ratio: 1702 / 1096;
+    margin: 0px auto;
+    overflow: hidden;
+    background-color: #0e1c2c;
+}
+
+.travel-map-block .world-map {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/world_map.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.56);
+
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.travel-map-block,
+.travel-map-scroll {
+    box-sizing: border-box;
+}
+
+#markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* маркеры сами перехватывают клики */
+}
+
+.country-marker {
+    position: absolute;
+    color: var(--highlight-color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    text-align: center;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.country-marker {
+    position: absolute;
+    color: var(--highlight-color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.country-marker .arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid var(--highlight-color);
+    animation: upDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes upDown {
+    from { transform: translateY(0); }
+    to   { transform: translateY(6px); }
+}
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    h3{
+        font-size: 64px;
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 792px top -24px;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1740px) {
+    h3{
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 700px top -18px;
+        margin-bottom: 32px;
+    }
+
+    .travel-margin{
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .travel-content{
+        margin-top: 32px;
+    }
+}
+
+@media (min-width: 1194px) and (max-width: 1440px)  {
+    h3{
+        font-size: 48px;
+        background-size: 136px;
+        background-repeat: no-repeat;
+        background-position: left 600px top -12px;
+        margin-bottom: 32px;
+    }
+
+    .travel-margin{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .text-width{
+        width: 80%;
+    }
+}
+
+@media (min-width: 712px) and (max-width: 1193px)  {
+    h3{
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 460px top 0px;
+        margin-bottom: 24px;
+    }
+
+    .travel-margin{
+        margin-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .text-width{
+        width: 100%;
+    }
+
+    .travel-content{
+        margin-top: 32px;
+    }
+
+    .travel-map-scroll {
+        margin: 20px 0;
+        padding-bottom: 0px;
+    }
+
+    .travel-map-block {
+        width: 1460px;
+        min-width: 1460px;
+        height: 940px;
+        aspect-ratio: auto;
+        margin: 0;
+    }
+
+    .travel-map-block .world-map {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .btn-travel {
+        max-width: 408px;
+        width: 48%;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .text-travel-width{
+        width: 48%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 712px) {
+
+    h3{
+        font-size: 24px;
+        padding-top: 8px;
+        background-size: 80px;
+        background-position: left 216px top -4px;
+        margin-bottom: 24px;
+    }
+
+    .travel-margin{
+        margin-top: 64px;
+        margin-bottom: 24px;
+    }
+
+    .text-width{
+        width: 100%;
+    }
+
+    .travel-content{
+        margin-top: 24px;
+    }
+
+    .travel-content{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 56px;
+    }
+
+    .travel-map-scroll {
+        width: 100%;
+        height: 560px;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .travel-map-block {
+        width: 869px;
+        min-width: 869px;
+        height: 560px;
+        margin: 0;
+        aspect-ratio: auto;
+    }
+
+    .travel-map-scroll {
+        scroll-padding-left: 0;
+    }
+
+    .travel-map-block .world-map {
+        background-position: left center;
+    }
+
+    .mobile-br{
+        display:block;
+    }
+
+    .btn-travel {
+        max-width: 408px;
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        margin-top: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Модальное окно поверх карты */
+.modal-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg);
+    display: none; /* появляется при выборе страны */
+    flex-direction: column;
+    z-index: 50;
+    color: var(--modal-text-color);
+}
+
+/* Кнопка закрытия */
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 26px;
+    color: var(--highlight-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 60;
+}
+
+/* Обёртка содержимого модального окна */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* Верхняя часть модального окна (картинка/градиент) */
+.modal-top {
+    flex: 1 1 60%;
+    min-height: 240px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.modal-top .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.modal-top .overlay h2 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--highlight-color);
+}
+
+.modal-top .overlay .details {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--modal-text-color);
+}
+
+.modal-top .overlay .details span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Нижняя часть модального окна */
+.modal-bottom {
+    flex: 1 1 40%;
+    padding: 24px;
+    background-color: #0b1726;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-bottom .description {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--modal-text-color);
+}
+
+/* Карточки для подробностей (маршрут, жильё и т.д.) */
+.modal-bottom .trip-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.modal-bottom .trip-card {
+    flex: 1 1 calc(50% - 16px);
+    background-color: #132a46;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.modal-bottom .trip-card h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: var(--highlight-color);
+}
+
+.modal-bottom .trip-card p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--modal-text-color);
+    line-height: 1.4;
+}
+
+/* Стилизация полосы прокрутки в модальном окне */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: #0e1c2c;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #324c6e;
+    border-radius: 4px;
+}

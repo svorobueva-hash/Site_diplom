@@ -1,0 +1,1487 @@
+
+/*СТИЛИ ТОЛЬКО  ДЛЯ ГЛАВНОЙ СТРАНИЦЫ*/
+
+/*БЕГУЩАЯ СТРОКА*/
+
+.marquee {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+}
+
+.slide {
+    width: 2809px;
+    height: 242px;
+    flex-shrink: 0;
+    margin-right: 80px;
+}
+
+
+.masked {
+    width: 100%;
+    height: 242px;
+    filter: brightness(1.1) contrast(1.2);
+
+    background: linear-gradient(
+        120deg,
+        #0a1f44,
+        #1e4fa3,
+        #6fa3ff,
+        #fff,
+        #1e4fa3,
+        #0a1f44
+    );
+    background-size: 200% 100%;
+    animation: gradientMove 6s linear infinite;
+
+    /* ВОТ ТУТ ТВОЙ SVG */
+    -webkit-mask: url("/images/NEEDLES CHEERLEADING TEAM.svg") no-repeat center;
+    mask: url("/images/NEEDLES CHEERLEADING TEAM.svg") no-repeat center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+@keyframes gradientMove {
+    from { background-position: 0% 50%; }
+    to   { background-position: 200% 50%; }
+}
+
+/*БЛОК НОВОСТЕЙ*/
+
+.news-block {
+  display: flex;
+  height: 752px;
+  margin-bottom: 128px;
+  overflow: hidden;
+}
+
+.content1 {
+    margin: 0 auto;
+    padding: 0 108px;  
+    align-items: center;
+    max-width: 1920px;
+    max-height: 1080px;
+    width: 100%;
+    display: flex;
+}
+
+/* Левая часть */
+.news-left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.news-left img {
+    width: 100%;
+    height: calc(100% - 38px);
+    object-fit: cover;
+}
+
+.news-left .date {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 8px;
+}
+
+/* Правая часть */
+.news-right {
+    width: 50%;
+    height: 752px;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.news-right h3 {
+    font-size: 72px;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 644px top -20px;
+    color: #fff;
+    flex-shrink: 0; 
+    font-weight: 300;
+}
+
+.news-subtitle {
+    color: #fff;
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+.btn-news {
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 264px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.btn-news:hover{
+    background: #6FA9E5;
+    color: #fff;
+}
+
+.btn-news:active{
+    background: transparent;
+    color: #6FA9E5;
+    border: 1px solid #6FA9E5;
+}
+
+.news-text{
+    flex: 1;
+    min-height: 100px;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 48px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.mobile-image{
+    display:none;
+    width:100%;
+    height:316px;
+    object-fit:cover;
+}
+
+/* Слайдер */
+.slider-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    /* ломаем контейнер */
+    width: calc(100% + 180px);
+    flex-shrink: 0;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 408px;
+    height: 216px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.swiper-slide.active {
+    opacity: 1;
+}
+
+#mainImage {
+    transition: opacity 0.3s;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 216px;
+    object-fit: cover;
+    display: block;
+}
+
+.swiper-slide span {
+    display: block;
+    font-size: 24px;
+    margin-top: 8px;
+    color: #fff;
+}
+
+/*СКРОЛЛ С ВИДЕО_РОЛИКАМИ*/
+
+.marquee2 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.marquee-track {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
+.track-right{
+    margin-top: 40px;
+}
+
+.item {
+    width: 984px;
+    height: 552px; 
+    flex-shrink: 0;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.marquee-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 100px;
+    color: #003497;
+    opacity: 0.6;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+
+/*О КОМАНДЕ*/
+
+.about-block h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.about-info{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+    grid-template-rows: repeat(4, auto);    /* 4 строки */
+    column-gap: 24px;
+    row-gap: 16px;
+    align-items:start;
+}
+
+.about1{
+    grid-column: 1 / 7;
+    grid-row: 1;
+}
+
+.about2{
+    grid-column: 1 / 7;
+    grid-row: 2;
+    margin:0;
+}
+
+.about3{
+    grid-column: 1 / 7;
+    grid-row: 3;
+    margin:0;
+}
+
+.btn-about {
+    color: white;
+    border: 1px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 32px;
+    width: 264px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 300;
+    grid-row: 4;
+}
+
+.btn-about:hover{
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+}
+
+.btn-about:active{
+    background: #D9D9D9;
+    color: #000;
+    border: none;
+}
+
+.about-image{
+    grid-column:8 / 13;
+    grid-row:1 / 5;
+    justify-self:end;
+    align-self:end;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+
+
+/*ЗАЯВКИ*/
+
+.application-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.application-colum{
+    display: flex;
+    flex-direction: column;
+    margin-top: 128px;
+}
+
+.application-colum2{
+    display: flex;
+    flex-direction: column;
+}
+
+.application-colum h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 720px top -20px;
+}
+
+.btn-application {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    width: 408px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.btn-application:hover{
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+}
+
+.btn-application:active{
+    background: #D9D9D9;
+    color: #000;
+    border: none;
+}
+
+.btn1 {
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    width: 408px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.btn1:hover{
+    background: #6FA9E5;
+    color: #fff;
+}
+
+.btn1:active{
+    background: transparent;
+    color: #6FA9E5;
+    border: 1px solid #6FA9E5;
+}
+
+
+/* Modal overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+
+        /* Modal window */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0a0a0a;
+            padding: 80px 80px;
+            width: 90%;
+            max-width: 800px;
+            z-index: 1000;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .modal h2 {
+            font-size: 56px;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .modal p.instructions {
+            font-size: 12px;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;          /* убираем стандартную рамку */
+            border-bottom: 1px solid #555;  /* тонкая линия внизу */
+            background: transparent;
+            background: transparent;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 3px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0067c0;
+        }
+
+        .form-group input.valid,
+        .form-group textarea.valid {
+            border-color: #25a7ff; /* blue when valid */
+        }
+
+        .form-group input.invalid,
+        .form-group textarea.invalid {
+            border-color: #f44336; /* red when invalid */
+        }
+
+        .modal button.submit {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+            width: 264px;
+            height: 44px;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 24px;
+        }
+
+        .modal button.submit:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .modal .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    .news-right h3 {
+        font-size: 64px;
+        background-image: url('/images/Polosy.png');
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 556px top -24px;
+    }
+
+    .about1{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .about-image{
+        grid-column: 8 / 13;
+        grid-row: 2 / 5;
+    }
+
+    .about-block h3{
+        font-size: 64px;
+        margin-top: 128px;
+        margin-bottom: 32px;
+    }
+
+    .application-colum h3{
+        font-size: 64px;
+        background-image: url('/images/Polosy.png');
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 624px top -24px;
+    }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1739px) {
+
+    .marquee {
+        margin-top: 56px;
+        margin-bottom: 64px;
+    }
+
+    .slide {
+        width: 2472px;
+        height: 213px;
+        flex-shrink: 0;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 213px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/NEEDLES CHEERLEADING TEAM_2.svg") no-repeat center;
+        mask: url("/images/NEEDLES CHEERLEADING TEAM_2.svg") no-repeat center;
+    }
+
+    /*БЛОК НОВОСТЕЙ*/
+
+    .news-block {
+        height: 719px;
+        margin-bottom: 104px;
+    }
+
+    .content1 {
+        padding: 0 64px;  
+        max-width: 1920px;
+        max-height: 1080px;
+    }
+
+    /* Левая часть */
+    .news-left {
+        width: 50%;
+        height: 100%;
+    }
+
+    .news-left img {
+        width: 100%;
+        height: calc(100% - 36px);
+    }
+
+    .news-left .date {
+        font-size: 22px;
+        margin-top: 8px;
+    }
+
+    /* Правая часть */
+    .news-right {
+        width: 50%;
+        height: 719px;
+        padding-left: 24px;
+        justify-content: space-between;
+    }
+
+    .news-right h3 {
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 496px top -18px;
+    }
+
+    .news-subtitle {
+        font-size: 22px;
+        margin-bottom: 16px;
+        margin-top: 8px;
+    }
+
+    .btn-news {
+        margin-bottom: 8px;
+    }
+
+    .news-text{
+        min-height: 100px;
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    /* Слайдер */
+    .slider-wrap {
+        /* ломаем контейнер */
+        width: calc(100% + 180px);
+    }
+
+    .swiper-slide {
+        width: 351px;
+        height: 186px;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 186px;
+    }
+
+    .swiper-slide span {
+        font-size: 22px;
+        margin-top: 8px;
+    }
+
+    /*О КОМАНДЕ*/
+
+    .about-block h3{
+        font-size: 56px;
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .about-info{
+        grid-template-rows: repeat(4, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 24px;
+    }
+
+    .about1{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .btn-about {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .about-image{
+        grid-column: 7 / 13;
+        grid-row: 2 / 5;
+    }
+
+    /*СКРОЛЛ С ВИДЕО_РОЛИКАМИ*/
+    .track-right{
+        margin-top: 32px;
+    }
+
+    .item {
+        width: 721px;
+        height: 400px; 
+        flex-shrink: 0;
+    }
+
+    .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .marquee-text {
+        font-size: 76px;
+        padding: 0 20px;
+    }
+
+    /*ЗАЯВКИ*/
+
+    .application-content{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 40px;
+    }
+
+    .application-colum{
+        margin-top: 104px;
+    }
+
+    .application-colum2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .btn-application {
+        margin-top: 0px;
+        margin-left: 24px;
+    }
+
+    .application-colum h3{
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 558px top -18px;
+    }
+}
+
+@media (min-width: 1194px) and (max-width: 1439px)  {
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 2135px;
+        height: 184px;
+        flex-shrink: 0;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 184px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/NEEDLES CHEERLEADING TEAM_3.svg") no-repeat center;
+        mask: url("/images/NEEDLES CHEERLEADING TEAM_3.svg") no-repeat center;
+    }
+
+    /*БЛОК НОВОСТЕЙ*/
+
+    .news-block {
+        height: 591px;
+        margin-bottom: 88px;
+    }
+
+    .content1 {
+        padding: 0 49px;  
+        max-width: 1920px;
+        max-height: 1080px;
+    }
+
+    /* Левая часть */
+
+    .news-left img {
+        width: 100%;
+        height: calc(100% - 36px);
+    }
+
+    .news-left .date {
+        font-size: 20px;
+        margin-top: 8px;
+    }
+
+    /* Правая часть */
+    .news-right {
+        width: 50%;
+        height: 591px;
+        padding-left: 24px;
+        justify-content: space-between;
+    }
+
+    .news-right h3 {
+        font-size: 48px;
+        background-size: 136px;
+        background-repeat: no-repeat;
+        background-position: left 420px top -12px;
+    }
+
+    .news-subtitle {
+        font-size: 20px;
+        margin-bottom: 16px;
+        margin-top: 8px;
+    }
+
+    .btn-news {
+        margin-bottom: 8px;
+    }
+
+    .news-text{
+        min-height: 100px;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    /* Слайдер */
+    .slider-wrap {
+        /* ломаем контейнер */
+        width: calc(100% + 180px);
+    }
+
+    .swiper-slide {
+        width: 262px;
+        height: 148px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 148px;
+    }
+
+    .swiper-slide span {
+        font-size: 20px;
+        margin-top: 8px;
+    }
+
+    /*О КОМАНДЕ*/
+
+    .about-block h3{
+        font-size: 48px;
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .about-info{
+        grid-template-rows: repeat(4, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 24px;
+    }
+
+    .about1{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .about2{
+        grid-column: 1 / 13;
+    }
+
+    .btn-about {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .about-image{
+        grid-column: 7 / 13;
+        grid-row: 3 / 5;
+    }
+
+    /*СКРОЛЛ С ВИДЕО_РОЛИКАМИ*/
+
+    .track-right{
+        margin-top: 24px;
+    }
+
+    .item {
+        width: 631px;
+        height: 344px; 
+    }
+
+    .item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .marquee-text {
+        font-size: 66px;
+        padding: 0 20px;
+    }
+
+    /*ЗАЯВКИ*/
+
+    .application-content{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 40px;
+    }
+
+    .application-colum{
+        margin-top: 88px;
+    }
+
+    .application-colum2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .btn-application {
+        margin-top: 0px;
+        margin-left: 24px;
+    }
+
+    .application-colum h3{
+        font-size: 48px;
+        padding-top: 4px;
+        background-size: 136px;
+        background-repeat: no-repeat;
+        background-position: left 470px top -12px;
+    }
+}
+@media (min-width: 981px) and (max-width: 1193px)  {
+        /*О КОМАНДЕ*/
+
+    .about-block h3{
+        font-size: 36px;
+        margin-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .about-info{
+        grid-template-rows: repeat(4, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 16px;
+    }
+
+    .about1{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .about2{
+        grid-column: 1 / 13;
+    }
+
+
+    .btn-about {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .about-image{
+        grid-column: 7 / 13;
+        grid-row: 3 / 5;
+    }
+}
+
+@media (min-width: 772px) and (max-width: 980px)  {
+    /*О КОМАНДЕ*/
+
+    .about-block h3{
+        font-size: 36px;
+        margin-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .about-info{
+        grid-template-rows: repeat(4, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 16px;
+    }
+
+    .about1{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .about2{
+        grid-column: 1 / 13;
+    }
+
+    .about3{
+        grid-column: 1 / 4;
+    }
+
+    .btn-about {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .about-image{
+        grid-column: 4 / 13;
+        grid-row: 3 / 5;
+    }
+}
+
+@media (min-width: 712px) and (max-width: 772px)  {
+    /*О КОМАНДЕ*/
+
+    .about-block h3{
+        font-size: 36px;
+        margin-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .about-info{
+        grid-template-rows: repeat(4, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 16px;
+    }
+
+    .about1{
+        grid-column: 1 / 13;
+        grid-row: 1;
+    }
+
+    .about2{
+        grid-column: 1 / 13;
+    }
+
+    .about3{
+        grid-column: 1 / 3;
+    }
+
+    .btn-about {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .about-image{
+        grid-column: 3 / 13;
+        grid-row: 3 / 5;
+    }
+}
+
+@media (min-width: 712px) and (max-width: 1193px)  {
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 1685px;
+        height: 145px;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 145px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/NEEDLES CHEERLEADING TEAM_4.svg") no-repeat center;
+        mask: url("/images/NEEDLES CHEERLEADING TEAM_4.svg") no-repeat center;
+    }
+
+    /*БЛОК НОВОСТЕЙ*/
+
+    .news-block{
+        height:auto;
+        margin-bottom:80px;
+        overflow:hidden;
+    }
+
+    .content1{
+        display:grid;
+        grid-template-columns:50% 50%;
+        grid-template-areas:"title title""image info""slider slider";
+        column-gap:16px;
+        row-gap:14px;
+        width:100%;
+        height:auto;
+        padding: 0 48px;
+        align-items: stretch;
+    }
+    .news-left{
+        grid-area:image;
+        width:100%;
+        height:auto;
+        margin: 0;
+    }
+    .news-left img{
+        width:100%;
+        height:316px;
+        object-fit:cover;
+    }
+
+    .news-left .date{
+        display: none;
+    }
+
+    .news-right{display:contents;}
+
+    .news-info{
+        grid-area:info;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        height:100%; 
+    }
+
+    .news-right h3{
+        grid-area:title;
+        margin:0;
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 328px top 0px;
+        margin-bottom: 16px;
+    }
+
+    .news-subtitle{
+        grid-area:info;
+        font-size:18px;
+        margin:0 0 8px;
+    }
+
+    .news-text{
+        grid-area:info;
+        font-size:18px;
+        margin: 16px 0 16px 0;
+    }
+
+    .btn-news{
+        grid-area:info;
+        width:242px;
+        height:44px;
+        font-size:18px;
+        margin-top:auto;
+        margin-bottom: 4px;
+    }
+
+    .slider-wrap{
+        grid-area:slider;
+        width:100vw;
+        margin-left: 49%;
+        transform:translateX(-50%);
+        padding-left: 48px;
+        overflow:hidden;
+    }
+    
+    .swiper{
+        width:100%;
+    }
+
+    .swiper-slide{
+        height:148px;
+        opacity:0.5;
+    }
+
+    .swiper-slide.active{
+        opacity:1;
+    }
+
+    .swiper-slide img{
+        width:100%;
+        height:148px;
+        object-fit:cover;
+    }
+
+    .swiper-slide span{
+        font-size:16px;
+        margin-top:4px;
+    }
+    
+    /*СКРОЛЛ С РОЛИКАМИ*/
+    
+    .item {
+        width: 577px;
+        height: 320px;
+    }
+
+    .marquee-text {
+        font-size: 60px;
+        padding: 0 8px;
+    }
+
+    .track-right{
+        margin-top: 24px;
+    }
+
+    .marquee2 {
+        gap: 0px;
+    }
+
+    /*ЗАЯВКИ*/
+
+    .application-colum{
+        margin-top: 64px;
+        width: 100%;
+    }
+
+    .application-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-top: 32px;
+        width: 100%;
+    }
+
+    .application-colum h3{
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 364px top 0px;
+    }
+
+    .application-colum2{
+        margin-top: 32px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn-application {
+        border: 1px solid #fff;
+        width: 48%;
+        min-width: 300px;
+        min-height: 44px;
+        height: 6ch;
+        font-size: 18px;
+        margin-top: 0px;
+    }
+
+    .btn1 {
+        width: 48%;
+        min-width: 300px;
+        min-height: 44px;
+        height: 6ch;
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 300px) and (max-width: 711px) {
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 1348px;
+        height: 116px;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 116px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/NEEDLES CHEERLEADING TEAM_5.svg") no-repeat center;
+        mask: url("/images/NEEDLES CHEERLEADING TEAM_5.svg") no-repeat center;
+    }
+
+    /*БЛОК НОВОСТЕЙ*/
+
+    .news-block{
+        height:auto;
+        margin-bottom:64px;
+        overflow:hidden;
+    }
+
+    .content1{
+         display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "title"
+            "info"
+            "slider";
+        row-gap:14px;
+        width:100%;
+        height:auto;
+        padding:0 20px;
+        align-items:stretch;
+    }
+
+    .news-left{
+        display:none;
+    }
+
+    .mobile-image{
+        display:block;
+    }
+
+    .news-left .date{
+        display: none;
+    }
+
+    .news-right{
+        display:contents;
+    }
+
+    .news-info{
+        grid-area:info;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        height:100%;
+        width:100%; 
+    }
+
+    .news-right h3{
+        grid-area:title;
+        margin:0;
+        font-size: 24px;
+        padding-top: 8px;
+        background-size: 80px;
+        background-position: left 224px top -4px;
+    }
+
+    .news-subtitle{
+        grid-area:info;
+        font-size:16px;
+        margin: 24px 0 0 0;
+    }
+
+    .news-text{
+        grid-area:info;
+        font-size:16px;
+        margin: 16px 0 24px 0;
+    }
+
+    .btn-news{
+        grid-area:info;
+        width:242px;
+        height:44px;
+        font-size:18px;
+        margin-top:auto;
+        margin-bottom: 32px;
+    }
+
+    .slider-wrap{
+        grid-area:slider;
+        width:100vw;
+        margin-left: 48%;
+        transform:translateX(-50%);
+        padding-left: 32px;
+        overflow:hidden;
+    }
+    
+    .swiper{
+        width:100%;
+    }
+
+    .swiper-slide{
+        height:148px;
+        opacity:0.5;
+    }
+
+    .swiper-slide.active{
+        opacity:1;
+    }
+
+    .swiper-slide img{
+        width:100%;
+        height:148px;
+        object-fit:cover;
+    }
+
+    .swiper-slide span{
+        font-size:16px;
+        margin-top:4px;
+    }
+    
+    /*СКРОЛЛ С РОЛИКАМИ*/
+    
+    .item {
+        width: 263px;
+        height: 148px;
+    }
+
+    .marquee-text {
+        font-size: 28px;
+        padding: 0 4px;
+    }
+
+    .track-right{
+        margin-top: 8px;
+    }
+
+    .marquee2 {
+        gap: 0px;
+    }
+
+    /*О КОМАНДЕ*/
+
+    .about-block h3{
+        font-size: 24px;
+        margin-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .about-info{
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(5, auto);    /* 4 строки */
+        column-gap: 8px;
+        row-gap: 16px;
+    }
+
+    .about1{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+
+    .about2{
+        grid-column: 1 / 5;
+        grid-row: 3;
+    }
+
+    .about3{
+        grid-column: 1 / 5;
+        grid-row: 4;
+    }
+
+    .btn-about {
+        margin-top: 24px;
+        width: 242px;
+        height: 44px;
+        font-size: 16px;
+        grid-row: 5;
+    }
+
+    .about-image{
+        grid-column: 1 / 5;
+        grid-row: 1;
+        justify-self:start;
+        align-self:start;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    /*ЗАЯВКИ*/
+
+    .application-colum{
+        margin-top: 64px;
+    }
+
+    .application-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-top: 24px;
+    }
+
+    .application-colum h3{
+        font-size: 24px;
+        padding-top: 8px;
+        background-size: 80px;
+        background-position: left 224px top -4px;
+    }
+
+    .application-colum2{
+        margin-top: 24px;
+        width: 100%;
+    }
+
+    .btn-application {
+        border: 1px solid #fff;
+        max-width: 353px;
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        margin-top: 24px;
+    }
+
+    .btn1 {
+        max-width: 353px;
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        align-items: center;
+    }
+}

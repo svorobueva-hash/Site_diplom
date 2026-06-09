@@ -1,0 +1,673 @@
+/*СТИЛИ ТОЛЬКО  ДЛЯ ГАЛЕРЕИ*/
+
+.content-gallery{
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.content-gallery2{
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.content-gallery3{
+    margin-top: 128px;
+    margin-bottom: 40px;
+}
+
+.content-gallery h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 800px top -20px;
+}
+
+.content-gallery2 h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.content-gallery3 h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 1040px top -20px;
+}
+
+/*СКРОЛ с ГАЛЕРЕЙ*/
+
+.marquee-gallery {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.marquee-row {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: max-content;
+    will-change: transform;
+    flex-shrink: 0;
+    gap: 24px;
+}
+
+.slide {
+    position: relative;
+    display: block;
+    height: 552px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 1. прямые углы слева, скос справа */
+.trap-left {
+    width: 817px;
+    clip-path: polygon(0 0, 100% 0, 67% 100%, 0 100%);
+    margin-right: -268px;
+}
+
+/* 2. прямоугольная трапеция */
+.trap-right {
+    width: 1174px;
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* 3. обычный прямоугольник */
+.square {
+    width: 552px;
+    height: 552px;
+    clip-path: none;
+}
+
+/* 4. вертикальное слово */
+.marquee-word {
+    height: 552px;
+    flex-shrink: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 102px;
+    line-height: 1;
+    color: #003497;
+    opacity: 0.8;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* затемнение, чтобы текст читался */
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.slide-label {
+    position: absolute;
+    z-index: 2;
+    left: 24px;
+    right: 24px;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.slide-label2 {
+    position: absolute;
+    z-index: 2;
+    left: 24px;
+    right: 24px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.slide-label-top {
+    top: 24px;
+}
+
+.slide-label-bottom {
+    bottom: 24px;
+}
+
+.slide-cta {
+    position: absolute;
+    bottom: 44%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    opacity: 0;
+    background: transparent;
+    color: rgba(211,229,255,1);
+    padding: 22px 96px;
+    font-size: 24px;
+    font-weight: 300;
+    border: 2px solid rgba(211,229,255,0.8);
+    border-radius: 40px;
+    transition: 0.25s;
+    z-index: 3;
+}
+
+.slide:hover .slide-cta {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.slide-label,
+.slide-label2 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.marquee-row {
+  will-change: transform;
+  transform: translateZ(0);  /* включает 3D‑контекст */
+}
+
+
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    .content-gallery h3{
+        font-size: 64px;
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 700px top -24px;
+    }
+
+    .content-gallery3 h3{
+        font-size: 64px;
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 920px top -24px;
+    }
+
+    .content-gallery2 h3{
+        font-size: 64px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1739px) {
+    .content-gallery h3{
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 610px top -18px;
+    }
+
+    .content-gallery3 h3{
+        font-size: 56px;
+        background-size: 156px;
+        background-repeat: no-repeat;
+        background-position: left 800px top -18px;
+    }
+
+    .content-gallery2 h3{
+        font-size: 56px;
+    }
+
+    .content-gallery{
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery2{
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery3{
+        margin-top: 104px;
+        margin-bottom: 32px;
+    }
+
+    .slide {
+        height: 478px;
+    }
+
+    .trap-left {
+        width: 734px;
+        clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+        margin-right: -240px;
+    }
+
+    /* 2. прямоугольная трапеция */
+    .trap-right {
+        width: 1021px;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* 3. обычный прямоугольник */
+    .square {
+        width: 478px;
+        height: 478px;
+    }
+
+    /* 4. вертикальное слово */
+    .marquee-word {
+        height: 478px;
+        font-size: 88px;
+        padding: 0 16px;
+    }
+
+    .slide-label {
+        left: 24px;
+        right: 24px;
+        font-size: 32px;
+    }
+
+    .slide-label2 {
+        left: 24px;
+        right: 24px;
+        font-size: 22px;
+    }
+
+    .slide-cta {
+        padding: 20px 90px;
+        font-size: 22px;
+        border: 2px solid rgba(211,229,255,0.8);
+        border-radius: 40px;
+    }
+}
+
+@media (min-width: 1194px) and (max-width: 1439px)  {
+    .content-gallery h3{
+        font-size: 48px;
+        background-size: 136px;
+        background-repeat: no-repeat;
+        background-position: left 524px top -12px;
+    }
+
+    .content-gallery3 h3{
+        font-size: 48px;
+        background-size: 136px;
+        background-repeat: no-repeat;
+        background-position: left 694px top -12px;
+    }
+
+    .content-gallery2 h3{
+        font-size: 48px;
+    }
+
+    .content-gallery{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery2{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery3{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .marquee-row {
+        gap: 16px;
+    }
+
+    .slide {
+        height: 400px;
+    }
+
+    .trap-left {
+        width: 578px;
+        clip-path: polygon(0 0, 100% 0, 67% 100%, 0 100%);
+        margin-right: -200px;
+    }
+
+    /* 2. прямоугольная трапеция */
+    .trap-right {
+        width: 852px;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* 3. обычный прямоугольник */
+    .square {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* 4. вертикальное слово */
+    .marquee-word {
+        height: 400px;
+        font-size: 74px;
+        padding: 0 8px;
+    }
+
+    .slide-label {
+        left: 24px;
+        right: 24px;
+        font-size: 28px;
+    }
+
+    .slide-label2 {
+        left: 24px;
+        right: 24px;
+        font-size: 20px;
+    }
+
+    .slide-cta {
+        padding: 18px 84px;
+        font-size: 20px;
+        border: 2px solid rgba(211,229,255,0.8);
+        border-radius: 40px;
+    }
+}
+
+@media (min-width: 712px) and (max-width: 1193px)  {
+    .content-gallery h3{
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 408px top 0px;
+    }
+
+    .content-gallery3 h3{
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 530px top 0px;
+    }
+
+    .content-gallery2 h3{
+        font-size: 36px;
+    }
+
+    .content-gallery{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery2{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery3{
+        margin-top: 88px;
+        margin-bottom: 32px;
+    }
+
+    .marquee-row {
+        gap: 8px;
+    }
+
+    .slide {
+        height: 239px;
+    }
+
+    .trap-left {
+        width: 355px;
+        clip-path: polygon(0 0, 100% 0, 67% 100%, 0 100%);
+        margin-right: -116px;
+    }
+
+    /* 2. прямоугольная трапеция */
+    .trap-right {
+        width: 508px;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* 3. обычный прямоугольник */
+    .square {
+        width: 239px;
+        height: 239px;
+    }
+
+    /* 4. вертикальное слово */
+    .marquee-word {
+        height: 239px;
+        font-size: 44px;
+        padding: 0 8px;
+    }
+
+    .slide-label {
+        left: 16px;
+        right: 16px;
+        font-size: 18px;
+    }
+
+    .slide-label2 {
+        left: 16px;
+        right: 16px;
+        font-size: 16px;
+    }
+
+    .slide-cta {
+        padding: 10px 56px;
+        font-size: 18px;
+        border: 2px solid rgba(211,229,255,0.8);
+        border-radius: 40px;
+    } 
+    
+    .slide-label-top {
+        top: 16px;
+    }
+
+    .slide-label-bottom {
+        bottom: 16px;
+    }
+}
+
+@media (min-width: 712px) and (max-width: 1193px)  {
+    .content-gallery h3{
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 408px top 0px;
+    }
+
+    .content-gallery3 h3{
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 530px top 0px;
+    }
+
+    .content-gallery2 h3{
+        font-size: 36px;
+    }
+
+    .content-gallery{
+        margin-top: 80px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery2{
+        margin-top: 80px;
+        margin-bottom: 32px;
+    }
+
+    .content-gallery3{
+        margin-top: 80px;
+        margin-bottom: 32px;
+    }
+
+    .marquee-row {
+        gap: 8px;
+    }
+
+    .slide {
+        height: 239px;
+    }
+
+    .trap-left {
+        width: 355px;
+        clip-path: polygon(0 0, 100% 0, 67% 100%, 0 100%);
+        margin-right: -116px;
+    }
+
+    /* 2. прямоугольная трапеция */
+    .trap-right {
+        width: 508px;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* 3. обычный прямоугольник */
+    .square {
+        width: 239px;
+        height: 239px;
+    }
+
+    /* 4. вертикальное слово */
+    .marquee-word {
+        height: 239px;
+        font-size: 44px;
+        padding: 0 8px;
+    }
+
+    .slide-label {
+        left: 16px;
+        right: 16px;
+        font-size: 18px;
+    }
+
+    .slide-label2 {
+        left: 16px;
+        right: 16px;
+        font-size: 16px;
+    }
+
+    .slide-cta {
+        padding: 10px 56px;
+        font-size: 18px;
+        border: 2px solid rgba(211,229,255,0.8);
+        border-radius: 40px;
+    } 
+    
+    .slide-label-top {
+        top: 16px;
+    }
+
+    .slide-label-bottom {
+        bottom: 16px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 711px) {
+    .content-gallery h3{
+        font-size: 24px;
+        padding-top: 8px;
+        background-size: 80px;
+        background-position: left 260px top -4px;
+    }
+
+    .content-gallery3 h3{
+        font-size: 24px;
+        padding-top: 8px;
+        background-size: 80px;
+        background-position: left 340px top -4px;
+    }
+
+    .content-gallery2 h3{
+        font-size: 24px;
+        justify-content: start;
+    }
+
+    .content-gallery{
+        margin-top: 64px;
+        margin-bottom: 24px;
+    }
+
+    .content-gallery2{
+        margin-top: 64px;
+        margin-bottom: 24px;
+    }
+
+    .content-gallery3{
+        margin-top: 64px;
+        margin-bottom: 24px;
+    }
+
+    .marquee-row {
+        gap: 8px;
+    }
+
+    .slide {
+        height: 144px;
+    }
+
+    .trap-left {
+        width: 220px;
+        clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+        margin-right: -72px;
+    }
+
+    /* 2. прямоугольная трапеция */
+    .trap-right {
+        width: 306px;
+        clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* 3. обычный прямоугольник */
+    .square {
+        width: 144px;
+        height: 144px;
+    }
+
+    /* 4. вертикальное слово */
+    .marquee-word {
+        height: 144px;
+        font-size: 26px;
+        padding: 0 0px;
+    }
+
+    .slide-label {
+        left: 8px;
+        right: 8px;
+        font-size: 16px;
+    }
+
+    .slide-label2 {
+        left: 8px;
+        right: 8px;
+        font-size: 14px;
+    }
+
+    .slide-cta {
+        padding: 8px 48px;
+        font-size: 16px;
+        border: 2px solid rgba(211,229,255,0.8);
+        border-radius: 40px;
+    } 
+    
+    .slide-label-top {
+        top: 8px;
+    }
+
+    .slide-label-bottom {
+        bottom: 8px;
+    }
+}

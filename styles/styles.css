@@ -1,0 +1,963 @@
+/*ОБЩИЕ СТИЛИ*/
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+    overflow-x: hidden;
+    align-items: center;
+    background-color: black;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 108px;  
+    align-items: center;
+    max-width: 1920px;
+    max-height: 1080px;
+    height: 100%;
+    width: 100%;
+}
+
+.content2 {
+    margin: 0 auto;
+    padding: 0 0;  
+    align-items: center;
+    max-width: 1920px;
+    max-height: 1080px;
+    width: 100%;
+}
+
+.content-privacy {
+    margin: 0 auto;
+    padding: 0 108px;  
+    align-items: center;
+    max-width: 1920px;
+    height: 100%;
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+.social {
+    width: 48px;
+    height: 48px;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.3s;
+}
+
+/* обычные иконки */
+.insta {
+    background-image: url('/images/inst.png');
+}
+
+.tg {
+    background-image: url('/images/telega.png');
+}
+
+.pin {
+    background-image: url('/images/pint.png');
+}
+
+.wa {
+    background-image: url('/images/what.png');
+}
+
+/* hover */
+.insta:hover {
+    background-image: url('/images/inst_2@2x.png');
+}
+
+.tg:hover {
+    background-image: url('/images/telega2.png');
+}
+
+.pin:hover {
+    background-image: url('/images/pint_2.png');
+}
+
+.wa:hover {
+    background-image: url('/images/What2.png');
+}
+
+/*БЛОК ЗАСТАВКИ*/
+
+.zastavka {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0px 0px 0px;
+}
+
+.logo {
+    width: 368px;
+    height: 112px;
+    margin-top: 40px;
+}
+
+.logo img {
+    width: 368px;  
+    height: 112px;  
+    object-fit: contain;
+    display: block;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.nav__link{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.nav__link:hover{
+    color: #6fa3ff;
+}
+
+.nav__link:active{
+    color: #D9D9D9;
+}
+
+.burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.zastavka2{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: calc(100vh - 480px);
+}
+
+.zastavka3{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: calc(100vh - 560px);
+}
+
+h1{
+    font-size: 140px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+h4{
+    font-size: 64px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.text-all{
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 0 0;
+}
+
+/*ГРАДИЕНТ*/
+
+.stripe {
+    position: relative;
+    height: 328px;
+}
+
+.stripe-text {
+    position: relative;
+    z-index: 2;
+    margin: 0px 108px 0 108px;
+    padding-top: 32px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.text {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+
+/* БЛОК С ПОЛОСКАМИ */
+
+.stripes {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    /* Градиент — как обычно */
+    background: linear-gradient(
+        120deg,
+        #000000 0%,
+        #060015 20%,
+        #1e4fa3 40%,
+        #6fa3ff 50%,
+        #1e4fa3 65%,
+        #060015 80%,
+        #000000 100%);
+    background-size: 300% 100%;
+    animation: wave 14s linear infinite;
+
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-image: url("/images/stripe.svg");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    
+    mask-image: url("/images/stripe.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/* Анимация "волны" */
+@keyframes wave {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 300% 0;
+    }
+}
+
+/*ФУТОР*/
+
+footer {
+    background: linear-gradient(to bottom, #000000, #0D2B60);
+    padding-bottom: 96px;
+    padding-top: 56px;
+    margin-top: 124px;
+}
+
+.footer-colum{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-stroke{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-text{
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    padding: 24px 0 0 0;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: end;
+}
+
+.address-tablet {
+    display: none;
+}
+
+.socials {
+    order: 1;
+}
+
+.address-tablet {
+    order: 2;
+}
+
+.footer-right .footer-text:last-child {
+    order: 3;
+}
+
+.br-mobile {
+    display: none;
+}
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    .content{
+        margin: 0 auto;
+        padding: 0 112px;  
+    }
+
+    .content-privacy {
+        margin: 0 auto;
+        padding: 0 112px;  
+    }
+
+    .logo {
+        width: 263px;
+        height: 80px;
+        margin-top: 32px;
+    }
+
+    header {
+        margin: 16px 0px 0px 0px;
+    }
+
+    .nav{
+        gap: 64px;
+    }
+
+    .nav__link{
+        font-size: 22px;
+    }
+
+    .text-all{
+        font-size: 24px;
+    }
+
+    .zastavka2{
+        margin-top: calc(100vh - 420px);
+    }
+
+    .zastavka3{
+        margin-top: calc(100vh - 500px);
+    }
+
+    h1{
+        font-size: 130px;
+    }
+    
+    h2{
+        font-size: 28px;
+    }
+
+    h4{
+        font-size: 58px;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    .text {
+        font-size: 34px;
+    }
+
+    .left {
+        padding-top: 24px;
+    }
+
+    .right {
+        padding-bottom: 24px;
+    }
+
+    /*ФУТОР*/
+
+    footer {
+        padding-bottom: 88px;
+        padding-top: 56px;
+        margin-top: 124px;
+    }
+}
+
+
+@media (min-width: 1440px) and (max-width: 1739px) {
+    .content{
+        margin: 0 auto;
+        padding: 0 64px;
+        margin-bottom: 88px;  
+    }
+
+    header {
+        margin: 16px 0px 0px 0px;
+    }
+
+    .content-privacy {
+        margin: 0 auto;
+        padding: 0 64px;  
+    }
+
+    .logo {
+        width: 263px;
+        height: 80px;
+        margin-top: 32px;
+    }
+
+    .nav{
+        gap: 56px;
+    }
+
+    .nav__link{
+        font-size: 18px;
+    }
+
+    .text-all{
+        font-size: 22px;
+    }
+
+    .zastavka2{
+        margin-top: calc(100vh - 380px);
+    }
+
+    .zastavka3{
+        margin-top: calc(100vh - 460px);
+    }
+
+    h1{
+        font-size: 120px;
+    }
+    
+    h2{
+        font-size: 26px;
+    }
+
+    h4{
+        font-size: 56px;
+    }
+
+    /*БЕГУЩАЯ СТРОКА*/
+
+    .masked {
+        width: 100%;
+        height: 213px;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    .stripe {
+        height: 296px;
+    }
+
+    .text {
+        font-size: 32px;
+    }
+
+    .stripe-text {
+        margin: 0px 64px 0 64px;
+        padding-top: 40px;
+        height: 260px;
+    }
+    
+    /*ФУТОР*/
+
+    footer {
+        padding-bottom: 16px;
+        padding-top: 56px;
+        margin-top: 104px;
+    }
+
+    .footer-text{
+        font-size: 22px;
+    }
+
+}
+
+
+@media (min-width: 1194px) and (max-width: 1439px)  {
+    .content{
+        margin: 0 auto;
+        padding: 0 49px;
+    }
+
+    .content-privacy {
+        margin: 0 auto;
+        padding: 0 49px;  
+    }
+
+    header {
+        margin: 16px 0px 0px 0px;
+    }
+
+    .logo {
+        width: 210px;
+        height: 64px;
+        margin-top: 32px;
+    }
+
+    .text-all{
+        font-size: 20px;
+    }
+
+    .nav__link{
+        font-size: 20px;
+    }
+
+    /*БУРГЕР_МЕНЮ*/
+
+    .burger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+
+        background: #0a1f44;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 24px;
+
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .zastavka2{
+        margin-top: calc(100vh - 360px);
+    }
+
+    .zastavka3{
+        margin-top: calc(100vh - 450px);
+    }
+
+    h1{
+        font-size: 100px;
+    }
+    
+    h2{
+        font-size: 22px;
+    }
+
+    h4{
+        font-size: 48px;
+    }
+
+    /*БЕГУЩАЯ СТРОКА*/
+
+    .masked {
+        width: 100%;
+        height: 184px;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    .stripe {
+        height: 240px;
+    }
+
+    .text {
+        font-size: 28px;
+    }
+
+    .stripe-text {
+        margin: 0px 49px 0 49px;
+        padding-top: 40px;
+        height: 200px;
+    }
+
+    /*ФУТОР*/
+
+    footer {
+        padding-bottom: 64px;
+        padding-top: 48px;
+        margin-top: 88px;
+    }
+
+    .footer-text{
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 875px) and (max-width: 1193px)  {
+    .stripes {
+        -webkit-mask-size: 136% 136%;
+        mask-size: 136% 136%;
+    }
+}
+
+@media (min-width: 712px) and (max-width: 1193px)  {
+    header {
+        margin: 16px 0px 0px 0px;
+    }
+
+    .content{
+        padding: 0 48px;  
+    }
+
+    .content-privacy {
+        padding: 0 48px;  
+    }
+
+    .text-all{
+        font-size: 18px;
+    }
+
+    .nav__link{
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 210px;
+        height: 64px;
+    }
+
+    /*БУРГЕР_МЕНЮ*/
+
+    .burger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+
+        background: #0a1f44;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 24px;
+
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .zastavka2{
+        display: flex;
+        margin-top: calc(100vh - 440px);
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .zastavka3{
+        display: flex;
+        margin-top: calc(100vh - 540px);
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .socials{
+        margin-top: 56px;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+    
+    h2{
+        font-size: 22px;
+    }
+
+    h4{
+        font-size: 36px;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    .stripe {
+        height: 150px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .stripe-text {
+        margin: 0px 48px 0 48px;
+        padding-top: 24px;
+        height: 132px;
+    }
+
+    /*БЕГУЩАЯ СТРОКА*/
+
+    .masked {
+        width: 100%;
+        height: 145px;
+    }
+
+    /*ФУТОР*/
+
+    footer {
+        padding-bottom: 56px;
+        padding-top: 40px;
+        margin-top: 80px;
+    }
+
+    .footer-right{
+        padding-top: -24px;
+    }
+
+    .address-desktop {
+        display: none;
+    }
+
+    .address-tablet {
+        order: 1; /* адрес вверх */
+        display: block;
+    }
+
+    .footer-text{
+        font-size: 18px;
+    }
+
+    .footer-right .footer-text:last-child {
+        order: 2;
+    }
+
+    .socials {
+        order: 3;
+    }
+}
+@media (max-width: 712px) {
+
+    header {
+        margin: 16px 0px 0px 0px;
+    }
+
+    .content{
+        padding: 0 24px;  
+    }
+
+    .content-privacy {
+        padding: 0 20px;  
+    }
+
+    .text-all{
+        font-size: 16px;
+    }
+
+    .nav__link{
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 210px;
+        height: 64px;
+        margin-top: 24px
+    }
+
+    /*БУРГЕР_МЕНЮ*/
+
+    .burger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .burger img {
+        width: 57px;
+        height: 44px;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 88%;
+        height: 100vh;
+
+        background: #0a1f44;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 24px;
+
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .zastavka2{
+        display: flex;
+        margin-top: calc(100vh - 400px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .zastavka3{
+        display: flex;
+        margin-top: calc(100vh - 490px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    h1{
+        font-size: 88px;
+    }
+    
+    h2{
+        font-size: 16px;
+    }
+
+    h4{
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .stripes {
+        /* Маска — только чтобы оставить форму полосок */
+        -webkit-mask-image: url("/images/stripe-mini.svg");
+        -webkit-mask-size: 130% 130%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        
+        mask-image: url("/images/stripe-mini.svg");
+        mask-size: 130% 130%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+    
+    .stripe {
+        height: 210px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .stripe-text {
+        margin: 0px 20px 0 20px;
+        padding-top: 16px;
+        height: 196px;
+    }
+    
+    /*ФУТОР*/
+
+    footer {
+        padding-bottom: 48px;
+        padding-top: 24px;
+        margin-top: 64px;
+    }
+
+    .footer-stroke{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .footer-right{
+        justify-content: flex-start; 
+        align-items: start;
+    }
+
+    .footer-text{
+        font-size: 16px;
+    }
+
+    .socials {
+        margin-top: 32px;
+        order: 3;
+    }
+
+    .address-tablet {
+        order: 1; /* адрес вверх */
+        display: block;
+    }
+
+    .footer-right .footer-text:last-child {
+        order: 2;
+    }
+
+    .br-mobile {
+        display: inline;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 614px) {
+    .stripes {
+        /* Маска — только чтобы оставить форму полосок */
+        -webkit-mask-image: url("/images/stripe-mini.svg");
+        -webkit-mask-size: 125% 125%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        
+        mask-image: url("/images/stripe-mini.svg");
+        mask-size: 125% 125%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+    
+    .stripe {
+        height: 190px;
+    }
+
+    .stripe-text {
+        margin: 0px 20px 0 20px;
+        padding-top: 16px;
+        height: 178px;
+    }
+}

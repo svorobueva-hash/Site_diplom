@@ -1,0 +1,126 @@
+.page-404 {
+  min-height: 100vh;
+  background: #080808;
+  color: #fff;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.error-header {
+  position: relative;
+  z-index: 10;
+}
+
+.error-center {
+  position: relative;
+  z-index: 2;
+
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-404 {
+  position: relative;
+  z-index: auto;
+  width: min(80ch, 80vw);
+}
+
+.error-img {
+  width: 100%;
+  display: block;
+}
+
+.error-img-front {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.error-img-back {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: block;
+}
+
+.error-text,
+.error-btn {
+  position: relative;
+  z-index: 6;
+}
+
+.error-marquee {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 3;
+
+  width: 100%;
+  height: 242px;
+
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.error-track {
+  display: flex;
+  width: max-content;
+}
+
+.error-slide {
+  width: 2809px;
+  height: 242px;
+  flex-shrink: 0;
+  margin-right: 80px;
+}
+
+.error-masked {
+  width: 100%;
+  height: 242px;
+
+  background: linear-gradient(
+    120deg,
+    #0a1f44,
+    #1e4fa3,
+    #6fa3ff,
+    #ffffff,
+    #1e4fa3,
+    #0a1f44
+  );
+
+  background-size: 200% 100%;
+  animation: gradientMove 6s linear infinite;
+
+  -webkit-mask: url("/images/NEEDLES CHEERLEADING TEAM.svg") no-repeat center;
+  mask: url("/images/NEEDLES CHEERLEADING TEAM.svg") no-repeat center;
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes gradientMove {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 200% 50%;
+  }
+}

@@ -1,0 +1,1397 @@
+/*СТИЛИ ДЛЯ СТРАНИЦЫ АКТУАЛЬНОЙ ИНФОРМАЦИИ*/
+
+.content4 {
+    margin: 0 auto;
+    padding: 0 108px;  
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+    margin-top: 128px;
+}
+
+.inform-info{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+    grid-template-rows: repeat(10, auto);    /* 4 строки */
+    column-gap: 24px;
+    align-items:start;
+}
+
+.var1{
+    grid-column: 1 / 7;
+    grid-row: 1;
+    margin-bottom: 40px;
+}
+
+.var2{
+    grid-column: 7 / 13;
+    grid-row: 5;
+    margin-top: 56px;
+    margin-bottom: 24px;
+}
+
+.var4{
+    grid-column: 7 / 13;
+    grid-row: 8;
+    margin-top: 56px;
+    margin-bottom: 24px;
+}
+
+.inform-h3 h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+}
+
+.in-text1{
+    grid-column: 7 / 13;
+    grid-row: 1;
+}
+
+.in-text2{
+    grid-column: 7 / 10;
+    grid-row: 2;
+}
+
+.in-text3{
+    grid-column: 7 / 10;
+    grid-row: 3;
+    margin-top: 24px;
+}
+
+.in-image1{
+    grid-column: 1 / 7;
+    grid-row: 2 / 5;
+    max-width: 840px;
+    width: 100%;
+    height: 456px;
+    object-fit:cover;
+}
+
+.in-image2{
+    grid-column: 10 / 13;
+    grid-row: 2;
+    max-width: 408px;
+    width: 100%;
+    height: 216px;
+    object-fit:cover;
+}
+
+.in-image3{
+    grid-column: 10 / 13;
+    grid-row: 3 / 5;
+    max-width: 408px;
+    width: 100%;
+    height: 216px;
+    object-fit:cover;
+    margin-top: 24px;
+}
+
+.var3{
+    grid-column: 1 / 7;
+    grid-row: 5 / 7;
+    margin-top: 56px;
+    margin-bottom: 24px;
+}
+
+
+/* БЛОК С ПОЛОСКАМИ */
+
+.stripes-inf {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    /* Градиент — как обычно */
+    background: linear-gradient(
+        120deg,
+        #000000 0%,
+        #060015 20%,
+        #1e4fa3 40%,
+        #6fa3ff 50%,
+        #1e4fa3 65%,
+        #060015 80%,
+        #000000 100%);
+    background-size: 300% 100%;
+    animation: wave 14s linear infinite;
+
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-image: url("/images/stripe-inform.svg");
+    -webkit-mask-size: 100% 120%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: right;
+    
+    mask-image: url("/images/stripe-inform.svg");
+    mask-size: 100% 120%;
+    mask-repeat: no-repeat;
+    mask-position: right;
+}
+
+/* Анимация "волны" */
+@keyframes wave {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 300% 0;
+    }
+}
+
+.stripe-inf {
+    position: relative;
+    height: 160px;
+}
+
+
+
+.in-text4{
+    grid-column: 7 / 13;
+    grid-row: 6;
+    margin-top: 0px;
+}
+
+.in-text5{
+    grid-column: 7 / 13;
+    grid-row: 7;
+    margin-top: 24px;
+}
+
+.in-image4{
+    grid-column: 1 / 7;
+    grid-row: 7 / 11;
+    max-width: 840px;
+    width: 100%;
+    height: 467px;
+    object-fit:cover;
+    margin-top: 24px;
+}
+
+.in-text6{
+    grid-column: 7 / 13;
+    grid-row: 9;
+}
+
+.btn-inform {
+    color: #D3E5FF;
+    border: 2px solid #D3E5FF;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 36px;
+    width: 264px;
+    align-items: center;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.var5{
+    grid-column: 7 / 10;
+    grid-row: 4;
+}
+
+.var6{
+    grid-column: 7 / 10;
+    grid-row: 10;
+}
+
+
+
+/*БЕГУЩАЯ СТРОКА*/
+
+.marquee {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+}
+
+.slide {
+    width: 2538px;
+    height: 242px;
+    flex-shrink: 0;
+    margin-right: 80px;
+}
+
+
+.masked {
+    width: 100%;
+    height: 242px;
+    filter: brightness(1.1) contrast(1.2);
+
+    background: linear-gradient(
+        120deg,
+        #0a1f44,
+        #1e4fa3,
+        #6fa3ff,
+        #fff,
+        #1e4fa3,
+        #0a1f44
+    );
+    background-size: 200% 100%;
+    animation: gradientMove 6s linear infinite;
+
+    /* ВОТ ТУТ ТВОЙ SVG */
+    -webkit-mask: url("/images/CHEER CHEER CHEER CHEER.svg") no-repeat center;
+    mask: url("/images/CHEER CHEER CHEER CHEER.svg") no-repeat center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+@keyframes gradientMove {
+    from { background-position: 0% 50%; }
+    to   { background-position: 200% 50%; }
+}
+
+
+
+.inform h3 {
+    font-size: 72px;
+    margin: 0;
+    background-image: url('/images/Polosy.png');
+    background-size: 188px;
+    background-repeat: no-repeat;
+    background-position: left 868px top -20px;
+    color: #fff;
+    flex-shrink: 0; 
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+
+.schedule {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+    grid-template-rows: repeat(1, auto);    /* 4 строки */
+    align-items: start;
+    column-gap: 24px;
+    padding: 0px;
+}
+
+.card {
+    max-width: 408px;
+    width: 100%;
+    height: 256px;
+    padding: 24px;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        0deg,
+        #0D2B60 0%,
+        #0D2B60 20%,
+        #000000 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.day,
+.time {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.content-inf h3 {
+    margin: 0 0 12px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.content-inf p {
+    margin: 0;
+    font-size: 24px;
+    color: #aab7c8;
+}
+
+.var7{
+    grid-column: 1 / 4;
+}
+
+.var8{
+    grid-column: 4 / 7;
+}
+
+.var9{
+    grid-column: 10 / 13;
+}
+
+.var10{
+    grid-column: 7 / 10;
+}
+
+.var11{
+    margin-top: 128px;
+}
+
+.inf-block{
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.in-image5{
+    max-width: 840px;
+    width: 50%;
+    height: 480px;
+    object-fit:cover;
+    flex-shrink: 0;
+}
+
+.inf-block2 {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+
+    width: 50%;
+    min-width: 0;
+}
+
+.inf-block2 p {
+    margin: 0;
+}
+
+.inf-block2 p:first-child {
+    flex-shrink: 0;
+    width: 220px;
+}
+
+.inf-block2 p:last-child {
+    flex: 1;
+}
+
+
+
+@media (min-width: 1740px) and (max-width: 1919px) {
+    .inform-h3 h3 {
+        font-size: 64px;
+    }
+
+    .inform h3 {
+        font-size: 64px;
+        background-image: url('/images/Polosy.png');
+        background-size: 188px;
+        background-repeat: no-repeat;
+        background-position: left 756px top -24px;
+    }
+
+    .content-inf h3 {
+        font-size: 36px;
+    }
+
+    .day,
+    .time {
+    font-size: 36px;
+    }
+
+    .card {
+        max-width: 400px;
+        width: 100%;
+        height: 256px;
+    }
+
+        /*ГРАДИЕНТ*/
+
+    .stripe-inf {
+        height: 136px;
+    }
+
+    .stripes-inf {
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 120%;
+    }
+}
+
+
+@media (min-width: 1440px) and (max-width: 1739px) {
+    .content4 {
+        margin: 0 auto;
+        padding: 0 64px;  
+        max-width: 1920px;
+        width: 100%;
+        margin-top: 104px;
+    }
+
+    .marquee {
+        margin-top: 56px;
+        margin-bottom: 64px;
+    }
+
+    .slide {
+        width: 2234px;
+        height: 213px;
+        flex-shrink: 0;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 213px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/CHEER CHEER CHEER CHEER2.svg") no-repeat center;
+        mask: url("/images/CHEER CHEER CHEER CHEER2.svg") no-repeat center;
+    }
+
+    .inform-h3 h3 {
+        font-size: 56px;
+    }
+
+    .inform h3 {
+        font-size: 56px;
+        background-size: 156px;
+        background-position: left 672px top -18px;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    .stripe-inf {
+        height: 136px;
+    }
+
+    .stripes-inf {
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-size: 140% 100%;
+    mask-size: 100% 110%;
+    }
+
+    /*ПЕРВЫЙ БЛОК*/
+    .day,
+    .time {
+    font-size: 28px;
+    line-height: 1;
+    }
+
+    .content-inf h3 {
+        margin: 0 0 12px;
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    .card {
+        max-width: 304px;
+        width: 100%;
+        height: 191px;
+    }
+
+    .content-inf p {
+        font-size: 22px;
+    }
+
+    /*ПЕРВЫЙ БЛОК*/
+
+    .var1{
+        grid-column: 1 / 7;
+        grid-row: 1;
+        margin-bottom: 40px;
+    }
+
+    .var2{
+        grid-column: 7 / 13;
+        grid-row: 6;
+        margin-top: 56px;
+        margin-bottom: 24px;
+    }
+
+    .var4{
+        grid-column: 7 / 13;
+        grid-row: 8;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+
+    .in-text1{
+        grid-column: 7 / 13;
+        grid-row: 2;
+        margin-bottom: 24px;
+    }
+
+    .in-text2{
+        grid-column: 7 / 13;
+        grid-row: 3;
+    }
+
+    .in-text3{
+        grid-column: 7 / 13;
+        grid-row: 4;
+        margin-top: 24px;
+    }
+
+    .in-image1{
+        grid-column: 1 / 7;
+        grid-row: 2 / 6;
+        max-width: 800px;
+        width: 100%;
+        height: 394px;
+    }
+
+    .in-image2{
+        grid-column: 1 / 4;
+        grid-row: 6;
+        max-width: 400px;
+        width: 100%;
+        height: 161px;
+        margin-top: 24px;
+    }
+
+    .in-image3{
+        grid-column: 4 / 7;
+        grid-row: 6;
+        max-width: 400px;
+        width: 100%;
+        height: 161px;
+        margin-top: 24px;
+    }
+
+    .var3{
+        grid-column: 1 / 7;
+        grid-row: 7;
+        margin-top: 32px;
+        margin-bottom: 0px;
+    }
+
+    .in-text4{
+        grid-column: 7 / 13;
+        grid-row: 7;
+        margin-top: -32px;
+    }
+
+    .in-text5{
+        grid-column: 7 / 13;
+        grid-row: 7;
+        margin-top: 80px;
+    }
+
+    .in-image4{
+        grid-column: 1 / 7;
+        grid-row: 8 / 11;
+        max-width: 800px;
+        width: 100%;
+        height: 318px;
+        margin-top: 24px;
+    }
+
+    .in-text6{
+        grid-column: 7 / 13;
+        grid-row: 9;
+    }
+
+    .btn-inform {
+        border: 2px solid #D3E5FF;
+        margin-top: 36px;
+        width: 264px;
+        height: 48px;
+        grid-column: 7 / 10;
+        grid-row: 4;
+    }
+
+    .var5{
+        grid-column: 7 / 10;
+        grid-row: 5;
+    }
+
+    .var6{
+        grid-column: 7 / 10;
+        grid-row: 10;
+    }
+
+    .var11{
+        margin-top: 104px;
+    }
+
+    /*ПОСЛЕДНИЙ БЛОК*/
+    .in-image5{
+        max-width: 640px;
+        width: 50%;
+        height: 440px;
+    }
+
+    .inf-block{
+        gap: 40px;
+    }
+
+    .inf-block2 {
+        gap: 32px;
+    }
+
+    .inf-block2 p:first-child {
+        flex-shrink: 0;
+        width: 230px;
+    }
+}
+
+
+
+@media (min-width: 1194px) and (max-width: 1439px)  {
+
+    .content4 {
+        padding: 0 49px;  
+        max-width: 1920px;
+        width: 100%;
+        margin-top: 88px;
+    }
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 1929px;
+        height: 184px;
+        flex-shrink: 0;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 184px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/CHEER CHEER CHEER CHEER3.svg") no-repeat center;
+        mask: url("/images/CHEER CHEER CHEER CHEER3.svg") no-repeat center;
+    }
+
+    .inform-h3 h3 {
+        font-size: 48px;
+    }
+
+    .inform h3 {
+        font-size: 48px;
+        background-size: 136px;
+        background-position: left 572px top -12px;
+    }
+
+    /*ГРАДИЕНТ*/
+
+    .stripe-inf {
+        height: 136px;
+    }
+
+    .stripes-inf {
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-size: 100% 118%;
+    mask-size: 100% 118%;
+    }
+
+    /*ПЕРВЫЙ БЛОК*/
+    .day,
+    .time {
+    font-size: 24px;
+    line-height: 1;
+    }
+
+    .content-inf h3 {
+        margin: 0 0 12px;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .card {
+        max-width: 304px;
+        width: 100%;
+        height: 210px;
+    }
+
+    .content-inf p {
+        font-size: 20px;
+    }
+
+    /*ПЕРВЫЙ БЛОК*/
+
+    .var1{
+        grid-column: 1 / 7;
+        grid-row: 1;
+        margin-bottom: 40px;
+    }
+
+    .var2{
+        grid-column: 7 / 13;
+        grid-row: 6;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+
+    .var4{
+        grid-column: 7 / 13;
+        grid-row: 8;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+
+    .in-text1{
+        grid-column: 7 / 13;
+        grid-row: 2;
+        margin-bottom: 24px;
+    }
+
+    .in-text2{
+        grid-column: 7 / 13;
+        grid-row: 3;
+    }
+
+    .in-text3{
+        grid-column: 7 / 13;
+        grid-row: 4;
+        margin-top: 24px;
+    }
+
+    .in-image1{
+        grid-column: 1 / 7;
+        grid-row: 2 / 6;
+        max-width: 640px;
+        width: 100%;
+        height: 394px;
+    }
+
+    .in-image2{
+        grid-column: 1 / 4;
+        grid-row: 6;
+        max-width: 304px;
+        width: 100%;
+        height: 161px;
+    }
+
+    .in-image3{
+        grid-column: 4 / 7;
+        grid-row: 6;
+        max-width: 304px;
+        width: 100%;
+        height: 161px;
+        margin-top: 0px;
+    }
+
+    .var3{
+        grid-column: 1 / 7;
+        grid-row: 7;
+        margin-top: 24px;
+        margin-bottom: 0px;
+    }
+
+    .in-text4{
+        grid-column: 7 / 13;
+        grid-row: 7;
+        margin-top: -32px;
+    }
+
+    .in-text5{
+        grid-column: 7 / 13;
+        grid-row: 7;
+        margin-top: 100px;
+    }
+
+    .in-image4{
+        grid-column: 1 / 7;
+        grid-row: 8 / 11;
+        max-width: 640px;
+        width: 100%;
+        height: 318px;
+        margin-top: 24px;
+    }
+
+    .in-text6{
+        grid-column: 7 / 13;
+        grid-row: 9;
+    }
+
+    .btn-inform {
+        border: 2px solid #D3E5FF;
+        margin-top: 36px;
+        width: 264px;
+        height: 48px;
+        grid-column: 7 / 10;
+        grid-row: 4;
+    }
+
+    .var5{
+        grid-column: 7 / 10;
+        grid-row: 5;
+        margin-top: 40px;
+    }
+
+    .var6{
+        grid-column: 7 / 10;
+        grid-row: 10;
+    }
+
+    .var11{
+        margin-top: 88px;
+    }
+
+    /*ПОСЛЕДНИЙ БЛОК*/
+    .in-image5{
+        max-width: 536px;
+        width: 50%;
+        height: 400px;
+    }
+
+    .inf-block{
+        gap: 32px;
+    }
+
+    .inf-block2 {
+        gap: 24px;
+    }
+
+    .inf-block2 p:first-child {
+        flex-shrink: 0;
+        width: 160px;
+    }
+}
+
+
+@media (min-width: 713px) and (max-width: 1193px)  {
+
+    .content4 {
+        padding: 0 48px;  
+        max-width: 1920px;
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 1523px;
+        height: 145px;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 145px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/CHEER CHEER CHEER CHEER4.svg") no-repeat center;
+        mask: url("/images/CHEER CHEER CHEER CHEER4.svg") no-repeat center;
+    }
+
+
+    .inform-h3 h3 {
+        font-size: 36px;
+    }
+
+    .inform h3 {
+        margin:0;
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 440px top 0px;
+        margin-bottom: 32px;
+    }
+
+    /*ГРАДИЕНТ*/
+    
+
+    .stripe-inf {
+        height: 160px;
+    }
+
+    .stripes-inf {
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-size: 100% 118%;
+    mask-size: 110% 130%;
+    }
+
+    /*ПОСЛЕДНИЙ БЛОК*/
+
+    .day,
+    .time {
+    font-size: 24px;
+    line-height: 1;
+    }
+
+    .content-inf h3 {
+        margin: 0 0 12px;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .card {
+        max-width: 600px;
+        width: 100%;
+        height: 156px;
+    }
+
+    .content-inf p {
+        font-size: 18px;
+    }
+
+    /*ПЕРВЫЙ БЛОК*/
+
+    .inform-info{
+        grid-template-columns: repeat(8, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(14, auto);    /* 4 строки */
+        column-gap: 24px;
+    }
+
+    .var1{
+        grid-column: 1 / 9;
+        grid-row: 1;
+        margin-bottom: 32px;
+    }
+
+    .var2{
+        grid-column: 1 / 9;
+        grid-row: 9;
+        margin-top: 40px;
+        margin-bottom: 32px;
+    }
+
+    .var4{
+        grid-column: 5 / 9;
+        grid-row: 12;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+
+    .in-text1{
+        grid-column: 1 / 9;
+        grid-row: 2;
+        margin-bottom: 24px;
+    }
+
+    .in-text2{
+        grid-column: 1 / 9;
+        grid-row: 5;
+        margin-top: 24px;
+    }
+
+    .in-text3{
+        grid-column: 1 / 9;
+        grid-row: 6;
+        margin-top: 24px;
+    }
+
+    .in-image1{
+        grid-column: 1 / 6;
+        grid-row: 3 / 5;
+        max-width: 800px;
+        width: 100%;
+        height: 320px;
+    }
+
+    .in-image2{
+        grid-column: 6 / 9;
+        grid-row: 3;
+        max-width: 320px;
+        width: 100%;
+        height: 148px;
+    }
+
+    .in-image3{
+        grid-column: 6 / 9;
+        grid-row: 4;
+        max-width: 320px;
+        width: 100%;
+        height: 148px;
+        margin-top: 0px;
+    }
+
+    .var3{
+        grid-column: 1 / 9;
+        grid-row: 8;
+        margin-top: 24px;
+        margin-bottom: 0px;
+    }
+
+    .in-text4{
+        grid-column: 1 / 9;
+        grid-row: 10;
+        margin-top: 0px;
+    }
+
+    .in-text5{
+        grid-column: 1 / 9;
+        grid-row: 11;
+        margin-top: 24px;
+    }
+
+    .in-image4{
+        grid-column: 1 / 5;
+        grid-row: 12 / 14;
+        max-width: 800px;
+        width: 100%;
+        height: 248px;
+        margin-top: 24px;
+    }
+
+    .in-text6{
+        grid-column: 5 / 9;
+        grid-row: 13;
+    }
+
+    .btn-inform {
+        border: 2px solid #D3E5FF;
+        margin-top: 36px;
+        width: 242px;
+        height: 44px;
+    }
+
+    .var5{
+        grid-column: 1 / 9;
+        grid-row: 7;
+        margin-top: 24px;
+    }
+
+    .var6{
+        grid-column: 1 / 9;
+        grid-row: 14;
+    }
+
+    .var11{
+        margin-top: 80px;
+    }
+
+    /*ПОСЛЕДНИЙ БЛОК*/
+
+    .schedule {
+        grid-template-columns: repeat(8, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(2, auto);    /* 4 строки */
+    }
+
+    .var7{
+        grid-column: 5 / 9;
+        grid-row: 1;
+    }
+
+    .var8{
+        grid-column: 1 / 5;
+        grid-row: 2;
+        margin-top: 24px;
+    }
+
+    .var9{
+        grid-column: 5 / 9;
+        grid-row: 2;
+        margin-top: 24px;
+    }
+
+    .var10{
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+
+    .inf-block{
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+
+    .in-image5{
+        max-width: 1200px;
+        width: 100%;
+        height: 400px;
+        object-fit:cover;
+    }
+
+    .inf-block2 {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+
+        width: 70%;
+
+        justify-content: flex-end;
+
+        min-width: 0;
+    }
+
+    .inf-block2 p:first-child {
+        flex-shrink: 0;
+        width: 200px;
+    }
+
+    h1{
+        font-size: 96px !important;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 712px) {
+    .content4 {
+        padding: 0 20px;  
+        margin-top: 64px;
+    }
+
+    .marquee {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .slide {
+        width: 1219px;
+        height: 145px;
+        margin-right: 80px;
+    }
+
+    .masked {
+        width: 100%;
+        height: 145px;
+        /* ВОТ ТУТ ТВОЙ SVG */
+        -webkit-mask: url("/images/CHEER CHEER CHEER CHEER5.svg") no-repeat center;
+        mask: url("/images/CHEER CHEER CHEER CHEER5.svg") no-repeat center;
+    }
+
+
+    .inform-h3 h3 {
+        font-size: 24px;
+    }
+
+    .inform h3 {
+        margin:0;
+        font-size: 24px;
+        padding-top: 8px;
+        background-size: 80px;
+        background-position: left 280px top -4px;
+    }
+
+    /*ГРАДИЕНТ*/
+    
+
+    .stripe-inf {
+        height: 96px;
+    }
+
+    .stripes-inf {
+    /* Маска — только чтобы оставить форму полосок */
+    -webkit-mask-size: 100% 118%;
+    mask-size: 110% 130%;
+    }
+
+    /*ПОСЛЕДНИЙ БЛОК*/
+
+    .day,
+    .time {
+    font-size: 20px;
+    line-height: 1;
+    }
+
+    .content-inf h3 {
+        margin: 0 0 12px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .card {
+        max-width: 600px;
+        width: 100%;
+        height: 140px;
+    }
+
+    .content-inf p {
+        font-size: 16px;
+    }
+
+    /*ПЕРВЫЙ БЛОК*/
+
+    .inform-info{
+        grid-template-columns: repeat(4, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(15, auto);    /* 4 строки */
+        column-gap: 24px;
+    }
+
+    .var1{
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin-bottom: 32px;
+    }
+
+    .var2{
+        grid-column: 1 / 5;
+        grid-row: 9;
+        margin-top: 40px;
+        margin-bottom: 32px;
+    }
+
+    .var4{
+        grid-column: 1 / 5;
+        grid-row: 12;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+
+    .in-text1{
+        grid-column: 1 / 5;
+        grid-row: 2;
+        margin-bottom: 24px;
+    }
+
+    .in-text2{
+        grid-column: 1 / 5;
+        grid-row: 5;
+        margin-top: 24px;
+    }
+
+    .in-text3{
+        grid-column: 1 / 5;
+        grid-row: 6;
+        margin-top: 24px;
+    }
+
+    .in-image1{
+        grid-column: 1 / 5;
+        grid-row: 3;
+        max-width: 800px;
+        width: 100%;
+        height: 208px;
+    }
+
+    .in-image2{
+        grid-column: 1 / 5;
+        grid-row: 4;
+        max-width: 320px;
+        width: 100%;
+        height: 102px;
+    }
+
+    .in-image3{
+        grid-column: 1 / 5;
+        grid-row: 4;
+        max-width: 320px;
+        width: 100%;
+        height: 102px;
+        margin-top: 0px;
+    }
+
+    .var3{
+        grid-column: 1 / 5;
+        grid-row: 8;
+        margin-top: 24px;
+        margin-bottom: 0px;
+    }
+
+    .in-text4{
+        grid-column: 1 / 5;
+        grid-row: 10;
+        margin-top: 0px;
+    }
+
+    .in-text5{
+        grid-column: 1 / 5;
+        grid-row: 11;
+        margin-top: 24px;
+    }
+
+    .in-image4{
+        grid-column: 1 / 5;
+        grid-row: 11;
+        max-width: 800px;
+        width: 100%;
+        height: 248px;
+        margin-top: 24px;
+    }
+
+    .in-text6{
+        grid-column: 1 / 5;
+        grid-row: 13;
+    }
+
+    .btn-inform {
+        border: 2px solid #D3E5FF;
+        margin-top: 36px;
+        width: 242px;
+        height: 44px;
+    }
+
+    .var5{
+        grid-column: 1 / 5;
+        grid-row: 7;
+        margin-top: 24px;
+    }
+
+    .var6{
+        grid-column: 1 / 5;
+        grid-row: 14;
+    }
+
+    .var11{
+        margin-top: 64px;
+    }
+
+    /*ПОСЛЕДНИЙ БЛОК*/
+
+    .schedule {
+        grid-template-columns: repeat(4, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(4, auto);    /* 4 строки */
+    }
+
+    .var7{
+        grid-column: 1 / 5;
+        grid-row: 2;
+        margin-top: 24px;
+    }
+
+    .var8{
+        grid-column: 1 / 5;
+        grid-row: 3;
+        margin-top: 24px;
+    }
+
+    .var9{
+        grid-column: 1 / 5;
+        grid-row: 4;
+        margin-top: 24px;
+    }
+
+    .var10{
+        grid-column: 1 / 5;
+        grid-row: 1;
+        margin-top: 24px;
+    }
+
+    .inf-block{
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+
+    .in-image5{
+        max-width: 1200px;
+        width: 100%;
+        height: 400px;
+        object-fit:cover;
+    }
+
+    .inf-block2 {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        min-width: 0;
+    }
+
+    .inf-block2 p:first-child {
+        flex-shrink: 0;
+        width: 124px;
+    }
+
+    h1{
+        font-size: 52px !important;
+    }
+}
