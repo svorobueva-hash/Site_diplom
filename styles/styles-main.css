@@ -1484,4 +1484,8 @@
         font-size: 16px;
         align-items: center;
     }
+
+    h2 br {
+        display: none;
+    }
 }
