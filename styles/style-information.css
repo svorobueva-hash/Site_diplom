@@ -1127,6 +1127,10 @@
         font-size: 96px !important;
     }
 
+    h1{
+        font-size: 88px !important;
+    }
+
 }
 
 @media (min-width: 300px) and (max-width: 712px) {

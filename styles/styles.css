@@ -314,12 +314,22 @@ footer {
     justify-content: space-between;
 }
 
+
+
 .footer-text{
     font-size: 24px;
     font-weight: 300;
     color: white;
     margin: 0;
     padding: 24px 0 0 0;
+}
+
+.hover:hover{
+    color: #003497;
+}
+
+.hover:active{
+    color: #d2d2d2;
 }
 
 .footer-right{
@@ -852,7 +862,7 @@ footer {
 
     .zastavka2{
         display: flex;
-        margin-top: calc(100vh - 400px);
+        margin-top: calc(100vh - 480px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -860,7 +870,7 @@ footer {
 
     .zastavka3{
         display: flex;
-        margin-top: calc(100vh - 400px);
+        margin-top: calc(100vh - 480px);
         flex-direction: column;
         align-items: center;
         justify-content: center;

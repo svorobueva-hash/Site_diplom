@@ -137,14 +137,14 @@
 }
 
 .btn-news:hover{
-    background: #6FA9E5;
+    background: #003497;
     color: #fff;
 }
 
 .btn-news:active{
-    background: transparent;
-    color: #6FA9E5;
-    border: 1px solid #6FA9E5;
+    background: #003497;
+    color: #fff;
+    opacity: 0.5;
 }
 
 .news-text{
@@ -393,7 +393,7 @@
 }
 
 .btn1:hover{
-    background: #6FA9E5;
+    background: #003497;
     color: #fff;
 }
 
@@ -1333,7 +1333,7 @@
         margin: 16px 0 24px 0;
     }
 
-    .btn-news{
+    .btn-galery{
         grid-area:info;
         width:242px;
         height:44px;

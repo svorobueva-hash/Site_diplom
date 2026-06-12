@@ -897,9 +897,34 @@
         -webkit-mask-size: 136% 136%;
         mask-size: 136% 136%;
     }
+
+    .hb-image{
+        height: 258px !important;
+    }
+
+    .hb-image2{
+        height: 258px !important;
+    }
+
+    .bd-image1{
+        height: 258px !important;
+    }
+
+    .bd-image2{
+        height: 258px !important;
+    }
+
+    .bd-image{
+        height: 258px !important;
+    }
+
+    .event-image{
+        height: 258px !important;
+    }
+
 }
 
-@media (min-width: 712px) and (max-width: 1193px)  {
+@media (min-width: 300px) and (max-width: 1193px)  {
     .marquee {
         margin-top: 48px;
         margin-bottom: 48px;
@@ -917,6 +942,245 @@
         /* ВОТ ТУТ ТВОЙ SVG */
         -webkit-mask: url("/images/PARTY4.svg") no-repeat center;
         mask: url("/images/PARTY4.svg") no-repeat center;
+    }
+
+    .content4 {
+        margin: 0 auto;
+        padding: 0 48px;  
+    }
+
+    .hp-h3 h3{
+        margin:0;
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 442px top 0px;
+        margin-bottom: 16px;
+    }
+
+    .hb-info{
+        grid-template-columns: repeat(8, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(3, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 24px;
+        margin-bottom: 80px;
+    }
+
+    .hb-text1{
+        grid-column: 1 / 9;
+        grid-row: 1;
+        margin-bottom: 0px;
+    }
+
+    .hb-image{
+        max-width: 600px;
+        width: 100%;
+        height: 212px;
+    }
+
+    .hb-image2{
+        max-width: 600px;
+        width: 100%;
+        height: 212px;
+    }
+
+    .var1{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+
+    .hb-text2{
+        grid-column: 1 / 9;
+        grid-row: 3;
+    }
+
+    .var2{
+        grid-column: 5 / 9;
+        grid-row: 2;
+    }
+
+    /*ВТОРОЙ БЛОК МЕРОПРИЯТИЙ - BEAUTY DAY*/
+
+    .bd-h3 h3{
+        font-size: 36px;
+        margin-bottom: 24px;
+        margin-top: 80px;
+    }
+
+    .bd-info{
+        grid-template-columns: repeat(8, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(6, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 24px;
+        margin-bottom: 88px;
+    }
+
+    .bd-text1{
+        grid-column: 1 / 9;
+        grid-row: 1;
+    }
+
+    .bd-text2{
+        grid-column: 1 / 9;
+        grid-row: 2;
+        margin-top: 0px;
+    }
+
+    .bd-text3{
+        grid-column: 1 / 9;
+        grid-row: 3;
+        margin-top: 0px;
+    }
+
+    .bd-image1{
+        grid-column: 5 / 9;
+        grid-row: 4;
+        max-width: 600px;
+        width: 100%;
+        height: 200px;
+    }
+
+    .bd-image2{
+        grid-column: 1 / 5;
+        grid-row: 4;
+        max-width: 600px;
+        width: 100%;
+        height: 200px;
+        margin-top: 0px;
+    }
+
+    .bd-image{
+        max-width: 600px;
+        width: 100%;
+        height: 200px;
+        object-fit:cover;
+    }
+
+    .bd-text4{
+        grid-column: 1 / 9;
+        grid-row: 5;
+        margin-top: 0px;
+    }
+
+    .bd-text5{
+        grid-column: 1 / 9;
+        grid-row: 7;
+        margin-top: 0px;
+    }
+
+    .var3{
+        grid-column: 1 / 5;
+        grid-row: 6;
+        margin-top: 0px;
+    }
+
+    .var4{
+        grid-column: 5 / 9;
+        grid-row: 6;
+        margin-top: 0px;
+    }
+
+    /*ТРЕТИЙ БЛОК МЕРОПРИЯТИЙ - ЛАГЕРЬ*/
+
+    .event-h3{
+        grid-column: 1 / 9;
+        grid-row: 1;
+    }
+
+    .event-h3 h3{
+        margin:0;
+        font-size: 36px;
+        padding-top: 2px;
+        background-size: 80px;
+        background-position: left 294px top 0px;
+        margin-bottom: 16px;
+    }
+
+    .event-info{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(8, auto);    /* 4 строки */
+        column-gap: 24px;
+        row-gap: 24px;
+        align-items:start;
+        margin-bottom: 80px;
+    }
+
+    .event-text{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+
+    .event-text2{
+        grid-column: 5 / 9;
+        grid-row: 2;
+        margin-top: 0px;
+    }
+
+    .var5{
+        grid-column: 1 / 5;
+        grid-row: 3;
+    }
+
+    .var6{
+        grid-column: 5 / 9;
+        grid-row: 3;
+    }
+
+    .event-image{
+        grid-column: 1 / 5;
+        grid-row: 7;
+        max-width: 600px;
+        width: 100%;
+        height: 200px;
+        margin-top: 0px;
+    }
+
+    .event-h3-2{
+        grid-column: 1 / 9;
+        grid-row: 4;
+        margin-top: 0px;
+    }
+
+    .event-h3-2 h3{
+        font-size: 36px;
+    }
+
+    .event-text3{
+        grid-column: 1 / 9;
+        grid-row: 5;
+        margin-top: 0px;
+    }
+
+    .event-text4{
+        grid-column: 1 / 9;
+        grid-row: 6;
+        margin-top: 0px;
+    }
+
+    .var7{
+        grid-column: 5 / 9;
+        grid-row: 7;
+        margin-top: 0px;
+    }
+
+    .event-text5{
+        grid-column: 1 / 9;
+        grid-row: 8;
+        margin-top: 0px;
+        justify-content: space-between;
+    }
+
+    h1{
+        font-size: 88px;
+    }
+
+    .btn-news{
+        width:242px;
+        height:44px;
+        font-size:18px;
+        margin-top:16px;
+        margin-bottom: 24px;
     }
 }
 
@@ -947,13 +1211,138 @@
         /* Маска — только чтобы оставить форму полосок */
         -webkit-mask-image: url("/images/stripe-event.svg");
         -webkit-mask-size: 100% 100%;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-position: center;
         
         mask-image: url("/images/stripe-event.svg");
         mask-size: 100% 100%;
-        mask-repeat: no-repeat;
-        mask-position: center;
+    }
+
+    .content4 {
+        margin: 0 auto;
+        padding: 0 20px !important; 
+    }
+
+    .hp-h3 h3{
+        margin:0;
+        font-size: 24px !important;
+        padding-top: 8px !important;
+        background-size: 80px !important;
+        background-position: left 280px top -4px !important;
+        margin-bottom: 24px !important;
+    }
+
+     .hb-info {
+        margin-bottom: 40px !important;
+        row-gap: 16px;
+        column-gap: 16px;
+     }
+    
+    /*ВТОРОЙ БЛОК МЕРОПРИЯТИЙ - BEAUTY DAY*/
+
+    .bd-info{
+        column-gap: 16px;
+        row-gap: 16px;
+        margin-bottom: 64px;
+    }
+
+    .bd-h3 h3{
+        font-size: 24px !important;
+        margin-bottom: 24px !important;
+        margin-top: 40px !important;
+    }
+
+    /*ТРЕТИЙ БЛОК МЕРОПРИЯТИЙ - ЛАГЕРЬ*/
+
+    .event-h3{
+        grid-column: 1 / 9;
+        grid-row: 1;
+    }
+
+    .event-h3 h3{
+         margin:0;
+        font-size: 24px !important;
+        padding-top: 8px !important;
+        background-size: 80px !important;
+        background-position: left 186px top -4px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .event-info{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); /* 12 колонок */
+        grid-template-rows: repeat(10, auto);    /* 4 строки */
+        column-gap: 16px;
+        row-gap: 16px;
+        align-items:start;
+        margin-bottom: 64px;
+    }
+
+    .event-text{
+        grid-column: 1 / 9;
+        grid-row: 2;
+    }
+
+    .event-text2{
+        grid-column: 1 / 9;
+        grid-row: 3;
+        margin-top: 0px;
+    }
+
+    .var5{
+        grid-column: 1 / 5;
+        grid-row: 4;
+    }
+
+    .var6{
+        grid-column: 5 / 9;
+        grid-row: 4;
+    }
+
+    .event-image{
+        grid-column: 1 / 5;
+        grid-row: 8;
+        max-width: 600px;
+        width: 100%;
+        height: 200px;
+        margin-top: 0px;
+    }
+
+    .event-h3-2{
+        grid-column: 1 / 9;
+        grid-row: 5;
+        margin-top: 24px;
+    }
+
+    .event-h3-2 h3{
+        font-size: 24px;
+    }
+
+    .event-text3{
+        grid-column: 1 / 9;
+        grid-row: 7;
+        margin-top: 0px;
+    }
+
+    .event-text4{
+        grid-column: 1 / 9;
+        grid-row: 9;
+        margin-top: 0px;
+    }
+
+    .var7{
+        grid-column: 5 / 9;
+        grid-row: 8;
+        margin-top: 0px;
+    }
+
+    .event-text5{
+        grid-column: 1 / 9;
+        grid-row: 10;
+        margin-top: 0px;
+        justify-content: space-between;
+    }
+
+    h1{
+        font-size: 52px !important;
     }
 }
 
@@ -969,5 +1358,33 @@
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
         mask-position: center;
+    }
+
+    .hb-image{
+        height: 140px !important;
+    }
+
+    .hb-image2{
+        height: 140px !important;
+    }
+
+    .bd-image1{
+        height: 140px !important;
+    }
+
+    .bd-image2{
+        height: 140px !important;
+    }
+
+    .bd-image{
+        height: 140px !important;
+    }
+
+    .event-image{
+        height: 140px !important;
+    }
+
+    h1{
+        font-size: 48px !important;
     }
 }
