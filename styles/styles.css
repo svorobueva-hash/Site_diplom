@@ -75,38 +75,53 @@ body{
 
 /* обычные иконки */
 .insta {
-    background-image: url('/images/inst.png');
+    background-image: url('/images/max.png');
 }
 
 .tg {
-    background-image: url('/images/telega.png');
+    background-image: url('/images/vk.png');
 }
 
 .pin {
-    background-image: url('/images/pint.png');
+    background-image: url('/images/phone.png');
 }
 
 .wa {
-    background-image: url('/images/what.png');
+    background-image: url('/images/rutub.png');
 }
 
 /* hover */
 .insta:hover {
-    background-image: url('/images/inst_2@2x.png');
+    background-image: url('/images/max_hover.png');
 }
 
 .tg:hover {
-    background-image: url('/images/telega2.png');
+    background-image: url('/images/vk_hover.png');
 }
 
 .pin:hover {
-    background-image: url('/images/pint_2.png');
+    background-image: url('/images/phone_hover.png');
 }
 
 .wa:hover {
-    background-image: url('/images/What2.png');
+    background-image: url('/images/rutub_hover.png');
 }
 
+.insta:active {
+    background-image: url('/images/max_active.png');
+}
+
+.tg:active {
+    background-image: url('/images/vk_active.png');
+}
+
+.pin:active {
+    background-image: url('/images/phone_active.png');
+}
+
+.wa:active {
+    background-image: url('/images/rutub_active.png');
+}
 /*БЛОК ЗАСТАВКИ*/
 
 .zastavka {
@@ -153,11 +168,11 @@ header {
 }
 
 .nav__link:hover{
-    color: #6fa3ff;
+    color: #003497;
 }
 
 .nav__link:active{
-    color: #D9D9D9;
+    color: #d2d2d2;
 }
 
 .burger {
