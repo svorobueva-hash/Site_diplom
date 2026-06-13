@@ -135,6 +135,27 @@ body{
     background-repeat: no-repeat;
 }
 
+.zastavka::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(0,0,0,.6) 0,
+            transparent 180px),
+        linear-gradient(to top,
+            rgba(0,0,0,.8) 0,
+            transparent 540px);
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.zastavka .content {
+    z-index: 2;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -441,7 +462,6 @@ footer {
     .content{
         margin: 0 auto;
         padding: 0 64px;
-        margin-bottom: 88px;  
     }
 
     header {
@@ -862,7 +882,7 @@ footer {
 
     .zastavka2{
         display: flex;
-        margin-top: calc(100vh - 480px);
+        margin-top: calc(100vh - 460px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -870,7 +890,7 @@ footer {
 
     .zastavka3{
         display: flex;
-        margin-top: calc(100vh - 480px);
+        margin-top: calc(100vh - 460px);
         flex-direction: column;
         align-items: center;
         justify-content: center;

@@ -76,6 +76,10 @@ document.querySelectorAll('.junior-slider').forEach(function (slider) {
     slidesPerView: 2,
     spaceBetween: 80,
     grabCursor: true,
+    pagination: {
+      el: '#top-slider .swiper-pagination',
+      clickable: true,
+    },
 
     breakpoints: {
 

@@ -328,6 +328,26 @@
 }
 
 
+.coach-slider-section .swiper-pagination {
+  position: static;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.coach-slider-section .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #777;
+  opacity: 1;
+}
+
+.coach-slider-section .swiper-pagination-bullet-active {
+  background: #003497;
+}
+
+
 
 
 @media (min-width: 1740px) and (max-width: 1919px) {
