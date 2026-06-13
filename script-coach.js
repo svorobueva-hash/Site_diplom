@@ -43,16 +43,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
       breakpoints: {
         0: {
-          slidesPerView: 1.2,
+          slidesPerView: 4.2,
         },
         600: {
-          slidesPerView: 1.6,
+          slidesPerView: 4,
+        },
+        720: {
+          slidesPerView: 3.6,
         },
         980: {
-          slidesPerView: 2.2,
+          slidesPerView: 3.4,
         },
         1194: {
-          slidesPerView: 2.8,
+          slidesPerView: 3.2,
         },
         1440: {
           slidesPerView: 3.4,
@@ -77,6 +80,10 @@ document.querySelectorAll('.junior-slider').forEach(function (slider) {
     breakpoints: {
 
       0: {
+        slidesPerView: 1,
+      },
+
+      640: {
         slidesPerView: 1,
       },
 
