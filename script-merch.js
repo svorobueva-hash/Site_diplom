@@ -61,13 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.getElementById('merch-btn').addEventListener('click', () => {
-    window.location.href =
-        'mailto:needles.cheer@yandex.ru'
-        + '?subject=Покупка%20мерча'
-        + '&body=Здравствуйте!%0A%0A'
-        + 'Мне понравился следующий мерч:%0A%0A'
-        + '- %0A%0A'
-        + 'Подскажите, пожалуйста, как его приобрести и какие доступны размеры.%0A%0A'
-        + 'Спасибо!';
+document.querySelectorAll('.merch-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        window.location.href =
+            'mailto:needles.cheer@yandex.ru'
+            + '?subject=Покупка%20мерча'
+            + '&body=Здравствуйте!%0A%0A'
+            + 'Мне понравился следующий мерч:%0A%0A'
+            + '- %0A%0A'
+            + 'Подскажите, пожалуйста, как его приобрести и какие доступны размеры.%0A%0A'
+            + 'Спасибо!';
+    });
 });
