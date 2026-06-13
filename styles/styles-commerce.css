@@ -209,14 +209,14 @@ h3{
 }
 
 .btn-zakaz:hover{
-    background: #6FA9E5;
+    background: #003497;
     color: #fff;
 }
 
 .btn-zakaz:active{
-    background: transparent;
-    color: #6FA9E5;
-    border: 1px solid #6FA9E5;
+    background: #003497;
+    color: #fff;
+    opacity: 0.5;
 }
 
 .commerce-image{
@@ -719,6 +719,14 @@ h3{
         margin-bottom: 8px;
     }
 
+    .btn-zakaz{
+        margin-top: 24px;
+        width:242px;
+        height:44px;
+        font-size:18px;
+        margin-bottom: 8px;
+    }
+
     .btn-zakaz2 {
         margin-top: 16px;
         grid-row: 4;
@@ -1029,6 +1037,18 @@ h3{
         font-size:18px;
         margin-top: 32px;
     }
+
+     .btn-zakaz3:hover{
+        background: #003497;
+        color: #fff;
+    }
+
+    .btn-zakaz3:active{
+        background: #003497;
+        color: #fff;
+        opacity: 0.5;
+    }
+
 
     h3 br {
         display: inline;
