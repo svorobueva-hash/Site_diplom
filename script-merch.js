@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: 16,
     allowTouchMove: false,
     pagination: {
-      el: '.swiper-pagination',
+      el: '#top-slider .swiper-pagination',
       clickable: true,
+      dynamicBullets: false,
     },
     // отключаем стрелки по умолчанию (их нет в верстке)
     navigation: false,
