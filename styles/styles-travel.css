@@ -1,4 +1,8 @@
 /*СТИЛИ ДЛЯ СТРАНИЦЫ ПУТЕШЕСТВИЙ*/
+.modal-overlay-tablet {
+    display: none;
+}
+
 
 :root {
     --highlight-color: #7BBCFE;
@@ -52,14 +56,14 @@ h3{
 }
 
 .btn-travel:hover{
-    background: #6FA9E5;
+    background: #003497;
     color: #fff;
 }
 
 .btn-travel:active{
-    background: transparent;
-    color: #6FA9E5;
-    border: 1px solid #6FA9E5;
+     background: #003497;
+    color: #fff;
+    opacity: 0.5;
 }
 
 
@@ -72,7 +76,7 @@ h3{
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
 
-    border: 2px solid #6FA9E5;
+    border: 2px solid #003497;
     border-radius: 8px;
     background-color: #0e1c2c;
 }
@@ -90,7 +94,7 @@ h3{
 .travel-map-block .world-map {
     width: 100%;
     height: 100%;
-    background-image: url('/images/world_map.png');
+    background-image: url('/images/world.png');
     background-size: cover;
     background-position: center;
     filter: brightness(0.56);
@@ -128,21 +132,6 @@ h3{
     user-select: none;
 }
 
-.country-marker {
-    position: absolute;
-    color: var(--highlight-color);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    font-size: 14px;
-    text-align: center;
-    pointer-events: all;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
-
 .country-marker .arrow {
     width: 0;
     height: 0;
@@ -152,19 +141,200 @@ h3{
     animation: upDown 1s ease-in-out infinite alternate;
 }
 
+.country-marker .arrow:hover{
+    border-bottom: 10px solid #003497;
+}
+
+.country-marker .arrow:after{
+    border-bottom: 10px solid #003497;
+    opacity: 0.5;
+}
+
 @keyframes upDown {
     from { transform: translateY(0); }
-    to   { transform: translateY(6px); }
+    to   { transform: translateY(5px); }
 }
 
 
+
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: #070707;
+    display: none;
+    z-index: 50;
+    color: #fff;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.country-page {
+    padding: 104px 104px;
+}
+
+.country-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.close-button {
+    position: static;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: white;
+}
+
+.country-header h2 {
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.country-tabs {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.country-tabs button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.country-left,
+.country-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.country-grid img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.country-left img {
+    height: 264px;
+}
+
+.country-center img {
+    height: 760px;
+}
+
+.country-right img {
+    height: 266px;
+}
+
+.country-grid p {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+}
+
+
+
+
 @media (min-width: 1740px) and (max-width: 1919px) {
+
+    .travel-map-block {
+        position: relative;
+        width: 100%;
+        max-width: 1702px;
+        aspect-ratio: 1702 / 1096;
+    }
+
     h3{
         font-size: 64px;
         background-size: 188px;
         background-repeat: no-repeat;
         background-position: left 792px top -24px;
         margin-bottom: 32px;
+    }
+
+    .country-header h2 {
+        font-size: 64px;
+        margin-bottom: 24px;
+    }
+
+    .country-page {
+        padding: 88px 88px;
+    }
+
+    .close-button {
+        font-size: 24px;
+    }
+
+    .country-tabs {
+        display: flex;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .country-tabs button {
+        font-size: 24px;
+    }
+
+    .country-left img {
+        height: 254px;
+    }
+
+    .country-center img {
+        height: 754px;
+    }
+
+    .country-right img {
+        height: 260px;
+    }
+
+    .country-grid p {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+}
+
+@media (min-width: 1740px) and (max-width: 1830px) {
+    .country-center img {
+        height: 764px;
+    }
+    .country-right img {
+        height: 256px;
+    }
+}
+
+@media (min-width: 1632px) and (max-width: 1740px) {
+    .country-center img {
+        height: 700px !important;
+    }
+    .country-right img {
+        height: 250px !important;
     }
 }
 
@@ -185,6 +355,61 @@ h3{
     .travel-content{
         margin-top: 32px;
     }
+
+    .country-header h2 {
+        font-size: 56px;
+        margin-bottom: 24px;
+    }
+
+    .country-page {
+        padding: 80px 80px;
+    }
+
+    .close-button {
+        font-size: 22px;
+    }
+
+    .country-tabs {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .country-tabs button {
+        font-size: 22px;
+    }
+
+    .country-left img {
+        height: 220px;
+    }
+
+    .country-center img {
+        height: 668px;
+    }
+
+    .country-right img {
+        height: 220px;
+    }
+
+    .country-grid p {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 1140px) and (max-width: 1480px)  {
+    .country-grid {
+        grid-template-columns: 1.25fr 1.15fr 1fr;
+        gap: 24px;
+    }
+
+    .country-center img {
+        height: 608px;
+    }
+
+    .country-right img {
+        height: 188px;
+    }
 }
 
 @media (min-width: 1194px) and (max-width: 1440px)  {
@@ -203,6 +428,123 @@ h3{
 
     .text-width{
         width: 80%;
+    }
+
+    .country-grid {
+        grid-template-columns: 1.2fr 1.2fr 1fr;
+        gap: 24px;
+    }
+
+    .country-header h2 {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    .country-page {
+        padding: 72px 72px;
+    }
+
+    .close-button {
+        font-size: 20px;
+    }
+
+    .country-tabs {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .country-tabs button {
+        font-size: 20px;
+    }
+
+    .country-left img {
+        height: 220px;
+    }
+
+    .country-center img {
+        height: 600px;
+    }
+
+    .country-right img {
+        height: 192px;
+    }
+
+    .country-grid p {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .country-left img {
+        height: 210px;
+    }
+
+    .country-center img {
+        height: 600px;
+    }
+
+    .country-right img {
+        height: 192px;
+    }
+}
+
+@media (min-width: 1194px) and (max-width: 1308px)  {
+
+    .country-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .country-left,
+    .country-center,
+    .country-right {
+        display: contents;
+    }
+
+    .country-left p:first-child {
+        grid-column: 1 / -1;
+        order: 1;
+    }
+
+    .country-left img {
+        grid-column: auto;
+        order: 2;
+    }
+
+    .country-center {
+        display: contents;
+    }
+
+    .country-center img {
+        grid-column: auto;
+        order: 3;
+    }
+
+    .country-left p:last-child {
+        grid-column: 1 / -1;
+        order: 4;
+    }
+
+    .country-right img:first-child {
+        grid-column: auto;
+        order: 5;
+    }
+
+    .country-right img:last-child {
+        grid-column: auto;
+        order: 6;
+    }
+
+    .country-right p {
+        grid-column: 1 / -1;
+        order: 7;
+    }
+
+    .country-grid img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
     }
 }
 
@@ -255,6 +597,106 @@ h3{
 
     .text-travel-width{
         width: 48%;
+    }
+
+
+    .modal-overlay-desktop {
+        display: none !important;
+    }
+
+    .content:has(.travel-map-scroll) {
+        position: relative;
+    }
+
+    .modal-overlay-tablet.is-open {
+        display: block;
+    }
+
+    .modal-overlay-tablet {
+        position: absolute;
+        top: 0;
+        left: 48px;
+        right: 48px;
+        width: auto;
+        height: 940px;
+        max-width: 100%;
+        background: #070707;
+        z-index: 999;
+        color: #fff;
+        overflow: hidden;
+        border: none;
+        box-sizing: border-box;
+        border: 2px solid #003497;
+    }
+
+    .modal-overlay-tablet .modal-content {
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .country-page {
+        padding: 48px 48px;
+    }
+    
+    .country-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .country-left,
+    .country-center,
+    .country-right {
+        display: contents;
+    }
+
+    .country-left p:first-child {
+        grid-column: 1 / -1;
+        order: 1;
+    }
+
+    .country-left img {
+        grid-column: auto;
+        order: 2;
+    }
+
+    .country-center {
+        display: contents;
+    }
+
+    .country-center img {
+        grid-column: auto;
+        order: 3;
+    }
+
+    .country-left p:last-child {
+        grid-column: 1 / -1;
+        order: 4;
+    }
+
+    .country-right img:first-child {
+        grid-column: auto;
+        order: 5;
+    }
+
+    .country-right img:last-child {
+        grid-column: auto;
+        order: 6;
+    }
+
+    .country-right p {
+        grid-column: 1 / -1;
+        order: 7;
+    }
+
+    .country-grid img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
     }
 }
 
@@ -330,139 +772,3 @@ h3{
 
 
 
-
-
-/* Модальное окно поверх карты */
-.modal-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--modal-bg);
-    display: none; /* появляется при выборе страны */
-    flex-direction: column;
-    z-index: 50;
-    color: var(--modal-text-color);
-}
-
-/* Кнопка закрытия */
-.close-button {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    font-size: 26px;
-    color: var(--highlight-color);
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 60;
-}
-
-/* Обёртка содержимого модального окна */
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
-}
-
-/* Верхняя часть модального окна (картинка/градиент) */
-.modal-top {
-    flex: 1 1 60%;
-    min-height: 240px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.modal-top .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.modal-top .overlay h2 {
-    margin: 0;
-    font-size: 28px;
-    color: var(--highlight-color);
-}
-
-.modal-top .overlay .details {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-top: 8px;
-    font-size: 14px;
-    color: var(--modal-text-color);
-}
-
-.modal-top .overlay .details span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-/* Нижняя часть модального окна */
-.modal-bottom {
-    flex: 1 1 40%;
-    padding: 24px;
-    background-color: #0b1726;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.modal-bottom .description {
-    flex: 1;
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--modal-text-color);
-}
-
-/* Карточки для подробностей (маршрут, жильё и т.д.) */
-.modal-bottom .trip-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.modal-bottom .trip-card {
-    flex: 1 1 calc(50% - 16px);
-    background-color: #132a46;
-    padding: 12px;
-    border-radius: 6px;
-}
-
-.modal-bottom .trip-card h3 {
-    margin: 0 0 6px;
-    font-size: 16px;
-    color: var(--highlight-color);
-}
-
-.modal-bottom .trip-card p {
-    margin: 0;
-    font-size: 13px;
-    color: var(--modal-text-color);
-    line-height: 1.4;
-}
-
-/* Стилизация полосы прокрутки в модальном окне */
-.modal-content::-webkit-scrollbar {
-    width: 8px;
-}
-.modal-content::-webkit-scrollbar-track {
-    background: #0e1c2c;
-}
-.modal-content::-webkit-scrollbar-thumb {
-    background: #324c6e;
-    border-radius: 4px;
-}

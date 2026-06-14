@@ -1,11 +1,10 @@
 const countries = [
     {
         id: 'russia',
-        name: 'Россия',
-        year: '2025',
-        activity: 'Фристайл',
+        name: 'РОССИЯ',
+        year: '2014-2026',
+        activity: 'СПб, Москва, Сахалин, Казань',
         position: { top: '20%', left: '65%' },
-        gradient: 'linear-gradient(135deg, #355C7D, #6C5B7B, #C06C84)',
         rating: 5.0,
         location: 'Гудермес',
         description: 'Для того чтобы купить билеты и отправиться на трассу необходимо открыть депозит в банке. Наши сбережения: 2&nbsp;месяца&nbsp;21&nbsp;день, но есть и рабочие дни: 17&nbsp;дней.',
@@ -20,7 +19,7 @@ const countries = [
         id: 'usa',
         name: 'США',
         year: '2019, 2020',
-        activity: 'Спортивный стант',
+        activity: 'Вашингтон, Нью-Йорк, Флорида',
         position: { top: '34%', left: '16%' },
         gradient: 'linear-gradient(135deg, #1E3C72, #2A5298)',
         rating: 4.5,
@@ -35,44 +34,47 @@ const countries = [
     },
     {
         id: 'china',
-        name: 'Китай',
+        name: 'КИТАЙ',
         year: '2023',
-        activity: 'Культурный тур',
+        activity: 'Нанкин',
         position: { top: '38%', left: '75%' },
-        gradient: 'linear-gradient(135deg, #E96443, #904E95)',
-        rating: 5.0,
-        location: 'Шанхай',
-        description: 'Мы исследовали старые кварталы Шанхая, наслаждались фонариками и атмосферой, посещали рынки и традиционные сады.',
-        cards: [
-            { title: 'Маршрут', text: 'Полёт в Шанхай, прогулки по набережной Бунд и поездки на метро.' },
-            { title: 'Где остановиться', text: 'Современный отель с видом на панораму города.' },
-            { title: 'Что посмотреть', text: 'Сад Юйюань, Храм Нефритового Будды, Шанхайский музей.' },
-            { title: 'Где поесть', text: 'Улица со стритфудом и ресторан с димсам.' }
-        ]
+        mainImage: '/images/China2.jpg',
+        images: [
+            '/images/China1.jpg',
+            '/images/China3.jpg',
+            '/images/China4.jpg',
+        ],
+        texts: {
+            leftTop: 'Команда Нидлс посетила XII Международные соревнования в Нанкине по чирлидингу и чир спорту.<br>Среди множества стран двойка нашей команды представляла дисциплину чир-хип-хоп, где заняла первое место.',
+            leftBottom: 'Помимо соревнований, мы познакомились с культурой и историей Китая. Посетили различные экскурсионные места и прогулялись по знаменитой оборонительной стене старого города Нанкина.',
+            rightMiddle: 'Побывали и на сувенирной улице, где смогли приобрести памятные подарки.<br>Поездка подарила нам множество ярких впечатлений, новых знакомств и незабываемых эмоций.'
+        }
     },
     {
         id: 'italy',
-        name: 'Италия',
+        name: 'ИТАЛИЯ',
         year: '2022',
-        activity: 'Путешествие',
-        position: { top: '34%', left: '49%' },
-        gradient: 'linear-gradient(135deg, #FFAFBD, #FFC3A0)',
-        rating: 4.8,
-        location: 'Рим',
-        description: 'Мы проводили время в Ватикане, посещали Колизей, наслаждались кофе и мороженым на уютных улочках.',
-        cards: [
-            { title: 'Маршрут', text: 'Обзорные экскурсии по Риму и поездки на Vespa.' },
-            { title: 'Где остановиться', text: 'Апартаменты недалеко от Испанской лестницы.' },
-            { title: 'Что посмотреть', text: 'Собор Святого Петра, Колизей, Форум.' },
-            { title: 'Где поесть', text: 'Gelateria, локальные траттории и пиццерии.' }
-        ]
+        activity: 'Рим',
+        position: { top: '35%', left: '49%' },
+        mainImage: '/images/china-main.jpg',
+        images: [
+            '/images/china-1.jpg',
+            '/images/china-2.jpg',
+            '/images/china-3.jpg',
+            '/images/china-4.jpg'
+        ],
+        texts: {
+            leftTop: 'Команда Нидлс посетила XII Международные соревнования в Нанкине по чирлидингу и чир спорту.<br>Среди множества стран двойка нашей команды представляла дисциплину чир-хип-хоп, где заняла первое место.',
+            leftBottom: 'Помимо соревнований, мы познакомились с культурой и историей Китая. Посетили различные экскурсионные места и прогулялись по знаменитой оборонительной стене старого города Нанкина.',
+            rightMiddle: 'Побывали и на сувенирной улице, где смогли приобрести памятные подарки.<br>Поездка подарила нам множество ярких впечатлений, новых знакомств и незабываемых эмоций.'
+        }
     },
     {
         id: 'france',
-        name: 'Франция',
+        name: 'ФРАНЦИЯ',
         year: '2022',
         activity: 'Спорт',
-        position: { top: '30%', left: '45%' },
+        position: { top: '32%', left: '45%' },
         gradient: 'linear-gradient(135deg, #C06C84, #F67280)',
         rating: 4.7,
         location: 'Париж',
@@ -234,74 +236,71 @@ countries.forEach(country => {
     marker.dataset.country = country.id;
     marker.innerHTML = `
         <div class="arrow"></div>
-        <div><strong>${country.name}</strong><br><span style="color:#8fa9c5">${country.year} • ${country.activity}</span></div>
+        <div><strong>${country.name}</strong><br><span style="color:#8fa9c5">${country.activity} • ${country.year}</span></div>
     `;
     markersContainer.appendChild(marker);
 });
 
 // Элементы модального окна
-const modalOverlay = document.getElementById('modalOverlay');
-const modalContent = document.getElementById('modalContent');
-const closeModalBtn = document.getElementById('closeModal');
+const isTablet = window.matchMedia('(min-width: 712px) and (max-width: 1193px)').matches;
+
+const modalOverlay = isTablet
+    ? document.getElementById('modalOverlayTablet')
+    : document.getElementById('modalOverlay');
+
+const modalContent = isTablet
+    ? document.getElementById('modalContentTablet')
+    : document.getElementById('modalContent');
+const mapScroll = document.querySelector('.travel-map-scroll');
 
 // Функция открытия модального окна и заполнения контента
 function openModal(countryId) {
+
+    mapScroll.style.overflowX = 'hidden';
+
     const country = countries.find(c => c.id === countryId);
     if (!country) return;
-    // Очистить содержимое
-    modalContent.innerHTML = '';
-    // Верхняя часть
-    const top = document.createElement('div');
-    top.classList.add('modal-top');
-    // Устанавливаем фон как градиент или изображение
-    top.style.backgroundImage = country.gradient;
-    const overlayDiv = document.createElement('div');
-    overlayDiv.classList.add('overlay');
-    const title = document.createElement('h2');
-    title.textContent = `${country.name}. ${country.location}`;
-    const detailsDiv = document.createElement('div');
-    detailsDiv.classList.add('details');
-    // Год
-    const yearSpan = document.createElement('span');
-    yearSpan.innerHTML = 'Год: ' + country.year;
-    detailsDiv.appendChild(yearSpan);
-    // Активность
-    const activitySpan = document.createElement('span');
-    activitySpan.innerHTML = country.activity;
-    detailsDiv.appendChild(activitySpan);
-    overlayDiv.appendChild(title);
-    overlayDiv.appendChild(detailsDiv);
-    top.appendChild(overlayDiv);
-    // Нижняя часть
-    const bottom = document.createElement('div');
-    bottom.classList.add('modal-bottom');
-    const descr = document.createElement('div');
-    descr.classList.add('description');
-    descr.innerHTML = country.description;
-    bottom.appendChild(descr);
-    const cardsContainer = document.createElement('div');
-    cardsContainer.classList.add('trip-info');
-    country.cards.forEach(card => {
-        const cardDiv = document.createElement('div');
-        cardDiv.classList.add('trip-card');
-        const t = document.createElement('h3');
-        t.textContent = card.title;
-        const p = document.createElement('p');
-        p.textContent = card.text;
-        cardDiv.appendChild(t);
-        cardDiv.appendChild(p);
-        cardsContainer.appendChild(cardDiv);
-    });
-    bottom.appendChild(cardsContainer);
-    // Добавляем части в контент
-    modalContent.appendChild(top);
-    modalContent.appendChild(bottom);
-    // Показываем модальное окно
+
+    modalContent.innerHTML = `
+        <div class="country-page">
+            <div class="country-header">
+            <h2>${country.name}</h2>
+            <div class="country-tabs">
+                <button class="close-button" onclick="window.location.href='gallery.html'">Галерея</button>
+                <button class="close-button" onclick="closeModal()">Закрыть</button>
+            </div>
+            </div>
+
+            <div class="country-grid">
+            <div class="country-left">
+                <p>${country.texts.leftTop}</p>
+
+                <img src="${country.images[0]}" alt="">
+
+                <p>${country.texts.leftBottom}</p>
+            </div>
+
+            <div class="country-center">
+                <img src="${country.mainImage}" alt="">
+            </div>
+
+            <div class="country-right">
+                <img src="${country.images[1]}" alt="">
+
+                <p>${country.texts.rightMiddle}</p>
+
+                <img src="${country.images[2]}" alt="">
+            </div>
+            </div>
+        </div>
+        `;
+
     modalOverlay.style.display = 'flex';
 }
 
 // Функция закрытия модального окна
 function closeModal() {
+    mapScroll.style.overflowX = 'auto';
     modalOverlay.style.display = 'none';
 }
 
@@ -314,11 +313,12 @@ markersContainer.addEventListener('click', (event) => {
     }
 });
 
-// Обработчики закрытия
-closeModalBtn.addEventListener('click', closeModal);
+
 // Закрытие при клике по фону
 modalOverlay.addEventListener('click', (event) => {
     if (event.target === modalOverlay) {
         closeModal();
     }
 });
+
+

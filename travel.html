@@ -13,18 +13,20 @@
     <div class="zastavka" style="--bg: url('/images/image3.png');">
         <div class="content">
         <header>
-            <img class="logo" src="/images/logo.png" alt="Logo">
+            <a href="index.html">
+                <img class="logo" src="/images/logo.png" alt="Logo">
+            </a>
 
             <img class="burger" src="/images/Burger.png" alt="menu">
 
             <nav class="nav">
-                <a class="nav__link" href="index.html">Главная</a>
                 <a class="nav__link" href="information.html">Информация</a>
-                <a class="nav__link" href="coach.html">Тренера</a>
-                <a class="nav__link" href="gallery.html">Галерея</a>
-                <a class="nav__link" href="commerce.html">Коммерция</a>
-                <a class="nav__link" href="events.html">Мероприятия</a>
                 <a class="nav__link" href="merch.html">Мерч</a>
+                <a class="nav__link" href="commerce.html">Коммерция</a>
+                <a class="nav__link" href="coach.html">Тренера</a>
+                <a class="nav__link" href="travel.html">Путешествия</a>
+                <a class="nav__link" href="events.html">Мероприятия</a>
+                <a class="nav__link" href="gallery.html">Галерея</a>
             </nav>
         </header>
         <div class="zastavka2">
@@ -63,13 +65,15 @@
 
                 <!-- Модальное окно -->
                 <div class="modal-overlay" id="modalOverlay">
-                    <button class="close-button" id="closeModal">&times;</button>
                     <div class="modal-content" id="modalContent">
                         <!-- Контент будет создан динамически через JavaScript -->
                     </div>
                 </div>
             </div>
+        <div class="modal-overlay modal-overlay-tablet" id="modalOverlayTablet">
+            <div class="modal-content" id="modalContentTablet"></div>
         </div>
+        </div> 
     </div>
 
 
@@ -95,13 +99,13 @@
                     </div>
                     <div class="footer-colum footer-right">
                        <div class="socials">
-                            <a href="#"><img src="/images/inst.png" alt="Instagram" style="width: 48px; height: 48px;"></a>
-                            <a href="#"><img src="/images/telega.png" alt="Telegram" style="width: 48px; height: 48px;"></a>
-                            <a href="#"><img src="/images/pint.png" alt="VK" style="width: 48px; height: 48px;"></a>
-                            <a href="#"><img src="/images/what.png" alt="YouTube" style="width: 48px; height: 48px;"></a>
+                            <a href="#" class="social insta"></a>
+                            <a href="#" class="social tg"></a>
+                            <a href="#" class="social pin"></a>
+                            <a href="#" class="social wa"></a>
                         </div>
                         <p class="footer-text address-tablet">Адрес: Санкт-Петербург, <br class="br-mobile">ул. Больая Морская, д. 18</p>
-                        <p class="footer-text">Конфиденциальная информация_документ</p>
+                        <p class="footer-text hover">Конфиденциальная информация_документ</p>
                     </div>
                 </div>
             </div>
