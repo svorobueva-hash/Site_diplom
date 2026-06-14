@@ -37,7 +37,7 @@ const countries = [
         name: 'КИТАЙ',
         year: '2023',
         activity: 'Нанкин',
-        position: { top: '38%', left: '75%' },
+        position: { top: '38%', left: '72%' },
         mainImage: '/images/China2.jpg',
         images: [
             '/images/China1.jpg',
@@ -109,16 +109,18 @@ const countries = [
         year: '2020',
         activity: 'Йога‑тур',
         position: { top: '56%', left: '67.2%' },
-        gradient: 'linear-gradient(135deg, #D74177, #FFE98A)',
-        rating: 4.9,
-        location: 'Гоа',
-        description: 'На индийском побережье мы занимались йогой на рассвете, посещали старинные храмы и наслаждались специями.',
-        cards: [
-            { title: 'Маршрут', text: 'Путешествие по Гоа и его пляжам.' },
-            { title: 'Где остановиться', text: 'Ашрам рядом с океаном.' },
-            { title: 'Что посмотреть', text: 'Храмы, водопады, плантации специй.' },
-            { title: 'Где поесть', text: 'Курсы индийской кухни и местные кафе.' }
-        ]
+        mainImage: '/images/china-main.jpg',
+        images: [
+            '/images/china-1.jpg',
+            '/images/china-2.jpg',
+            '/images/china-3.jpg',
+            '/images/china-4.jpg'
+        ],
+        texts: {
+            leftTop: 'Команда Нидлс посетила XII Международные соревнования в Нанкине по чирлидингу и чир спорту.<br>Среди множества стран двойка нашей команды представляла дисциплину чир-хип-хоп, где заняла первое место.',
+            leftBottom: 'Помимо соревнований, мы познакомились с культурой и историей Китая. Посетили различные экскурсионные места и прогулялись по знаменитой оборонительной стене старого города Нанкина.',
+            rightMiddle: 'Побывали и на сувенирной улице, где смогли приобрести памятные подарки.<br>Поездка подарила нам множество ярких впечатлений, новых знакомств и незабываемых эмоций.'
+        }
     },
     {
         id: 'spain',
@@ -242,7 +244,7 @@ countries.forEach(country => {
 });
 
 // Элементы модального окна
-const isTablet = window.matchMedia('(min-width: 712px) and (max-width: 1193px)').matches;
+const isTablet = window.matchMedia('(min-width: 300px) and (max-width: 1193px)').matches;
 
 const modalOverlay = isTablet
     ? document.getElementById('modalOverlayTablet')
@@ -260,6 +262,11 @@ function openModal(countryId) {
 
     const country = countries.find(c => c.id === countryId);
     if (!country) return;
+
+    if (!country.texts || !country.images || !country.mainImage) {
+        console.log('Нет данных для модалки:', country.name);
+        return;
+    }
 
     modalContent.innerHTML = `
         <div class="country-page">
@@ -295,12 +302,14 @@ function openModal(countryId) {
         </div>
         `;
 
-    modalOverlay.style.display = 'flex';
+    modalOverlay.classList.add('is-open');
+    modalOverlay.style.display = 'block';
 }
 
 // Функция закрытия модального окна
 function closeModal() {
     mapScroll.style.overflowX = 'auto';
+    modalOverlay.classList.remove('is-open');
     modalOverlay.style.display = 'none';
 }
 

@@ -546,14 +546,25 @@ h3{
         height: 260px;
         object-fit: cover;
     }
+
 }
 
 @media (min-width: 712px) and (max-width: 1193px)  {
+    .country-grid p {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
     h3{
         font-size: 36px;
         padding-top: 2px;
         background-size: 80px;
         background-position: left 460px top 0px;
+        margin-bottom: 24px;
+    }
+
+    .country-header h2 {
+        font-size: 36px;
         margin-bottom: 24px;
     }
 
@@ -606,10 +617,6 @@ h3{
 
     .content:has(.travel-map-scroll) {
         position: relative;
-    }
-
-    .modal-overlay-tablet.is-open {
-        display: block;
     }
 
     .modal-overlay-tablet {
@@ -702,6 +709,7 @@ h3{
 
 @media (min-width: 300px) and (max-width: 712px) {
 
+
     h3{
         font-size: 24px;
         padding-top: 8px;
@@ -763,6 +771,129 @@ h3{
         height: 44px;
         font-size: 16px;
         margin-top: 24px;
+    }
+
+    .modal-overlay-desktop {
+        display: none !important;
+    }
+
+    .content:has(.travel-map-scroll) {
+        position: relative;
+    }
+
+    .modal-overlay-tablet {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        width: auto;
+        height: 560px;
+        max-width: 100%;
+        background: #070707;
+        z-index: 999;
+        color: #fff;
+        overflow: hidden;
+        border: none;
+        box-sizing: border-box;
+        border: 2px solid #003497;
+    }
+
+    .modal-overlay-tablet .modal-content {
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .country-page {
+        padding: 24px 24px;
+    }
+    
+    .country-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .country-left,
+    .country-center,
+    .country-right {
+        display: contents;
+    }
+
+    .country-left p:first-child {
+        grid-column: 1 / -1;
+        order: 1;
+    }
+
+    .country-left img {
+        grid-column: auto;
+        order: 2;
+    }
+
+    .country-center {
+        display: contents;
+    }
+
+    .country-center img {
+        grid-column: auto;
+        order: 3;
+    }
+
+    .country-left p:last-child {
+        grid-column: 1 / -1;
+        order: 4;
+    }
+
+    .country-right img:first-child {
+        grid-column: auto;
+        order: 5;
+    }
+
+    .country-right img:last-child {
+        grid-column: auto;
+        order: 6;
+    }
+
+    .country-right p {
+        grid-column: 1 / -1;
+        order: 7;
+    }
+
+    .country-grid img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .close-button {
+        font-size: 18px;
+    }
+
+    .country-tabs {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .country-tabs button {
+        font-size: 18px;
+    }
+
+    .country-grid p {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    .country-header h2 {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+
+    .country-header{
+        margin-bottom: 16px;
     }
 }
 
