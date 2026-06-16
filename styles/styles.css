@@ -73,6 +73,27 @@ body{
     transition: 0.3s;
 }
 
+.logo {
+    display: block;
+    width: 368px;
+    height: 112px;
+
+    background-image: url('/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: 0.3s;
+}
+
+.logo:hover {
+    background-image: url('/images/logo2.png');
+}
+
+.logo:active {
+    background-image: url('/images/logo3.png');
+}
+
 /* обычные иконки */
 .insta {
     background-image: url('/images/max.png');
