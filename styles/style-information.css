@@ -174,7 +174,7 @@
 
 .btn-inform {
     color: #D3E5FF;
-    border: 2px solid #D3E5FF;
+    border: 1px solid #D3E5FF;
     background: transparent;
     cursor: pointer;
     margin-top: 36px;
@@ -185,6 +185,20 @@
     font-size: 18px;
     font-weight: 300;
 }
+
+.btn-inform:hover{
+    background: #D3E5FF;
+    color:#000000;
+    border: none;
+}
+
+.btn-inform:active{
+    color: #D3E5FF;
+    border: 1px solid #D3E5FF;
+    background: transparent;
+    opacity: 0.5;
+}
+
 
 .var5{
     grid-column: 7 / 10;

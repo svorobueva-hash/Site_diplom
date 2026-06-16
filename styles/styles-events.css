@@ -156,7 +156,7 @@
 
 .btn-galery {
     color: #D3E5FF;
-    border: 2px solid #D3E5FF;
+    border: 1px solid #D3E5FF;
     background: transparent;
     cursor: pointer;
     margin-top: 36px;
@@ -169,16 +169,16 @@
 }
 
 .btn-galery:hover{
-    background: #003497;
-    color: #fff;
+    background: #D3E5FF;
+    color: #000;
     border: none;
 }
 
 .btn-galery:active{
     opacity: 0.5;
-    background: #003497;
-    color: #fff;
-    border: none;
+    background: transparent;
+    color: #D3E5FF;
+    border: 1px solid #D3E5FF;
 }
 
 /*ВТОРОЙ БЛОК МЕРОПРИЯТИЙ - BEAUTY DAY*/

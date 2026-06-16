@@ -384,7 +384,187 @@ footer {
 }
 
 
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0a0a0a;
+    color: #fff;
+    padding: 96px;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 90vh;
+    box-sizing: border-box;
+}
+
+.modal h3{
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#teamModal{
+    flex-direction: column;
+}  
+
+#performanceForm {
+    flex-direction: column;
+} 
+
+.instructions {
+    margin-bottom: 32px;
+}
+
+.form-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.modal .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #777;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    resize: none;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-bottom-color: #f44336;
+}
+
+.form-group input.valid,
+.form-group textarea.valid {
+    border-bottom-color: #25a7ff;
+}
+
+.submit {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    width: 408px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 40px;
+    align-self: flex-start;
+}
+
+.submit:hover{
+    background: #D3E5FF;
+    color: #000;
+    border: none;
+}
+
+.submit:active{
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    opacity: 0.5;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+@media (max-width: 991px) {
+    .form-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .submit {
+        width: 100%;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #0a0a0a;
+        color: #fff;
+        padding: 40px;
+        width: 90%;
+        max-width: 1200px;
+        z-index: 1000;
+        overflow-y: auto;
+        max-height: 90vh;
+        box-sizing: border-box;
+    }
+
+    .modal .close-btn {
+        top: 8px;
+        right: 8px;
+
+        width: 40px;
+        height: 40px;
+
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 28px;
+        z-index: 1001;
+    }
+}
+
+
 @media (min-width: 1740px) and (max-width: 1919px) {
+
+    .modal h3{
+        font-size: 64px;
+        margin-bottom: 0px;
+    }
+
     .content{
         margin: 0 auto;
         padding: 0 112px;  
@@ -462,6 +642,12 @@ footer {
 
 
 @media (min-width: 1440px) and (max-width: 1739px) {
+
+    .modal h3{
+        font-size: 56px;
+        margin-bottom: 0px;
+    }
+
     .content{
         margin: 0 auto;
         padding: 0 64px;
@@ -553,6 +739,12 @@ footer {
 
 
 @media (min-width: 1194px) and (max-width: 1439px)  {
+
+    .modal h3{
+        font-size: 48px;
+        margin-bottom: 4px;
+    }
+
     .content{
         margin: 0 auto;
         padding: 0 49px;
@@ -705,6 +897,12 @@ footer {
 }
 
 @media (min-width: 712px) and (max-width: 1193px)  {
+
+    .modal h3{
+        font-size: 36px;
+        margin-bottom: 8px;
+    }
+
     header {
         margin: 16px 0px 0px 0px;
     }
@@ -876,6 +1074,11 @@ footer {
     }
 }
 @media (max-width: 712px) {
+
+    .modal h3{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
 
     header {
         margin: 16px 0px 0px 0px;

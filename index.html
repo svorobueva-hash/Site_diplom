@@ -36,10 +36,10 @@
             </div>
 
             <div class="socials">
-                <a href="#" class="social insta"></a>
-                <a href="#" class="social tg"></a>
-                <a href="#" class="social pin"></a>
-                <a href="#" class="social wa"></a>
+                <a href="#https://max.ru/" class="social insta"></a>
+                <a href="#https://vk.com/needles_cheer" class="social tg"></a>
+                <a href="#tel:+79991234567" class="social pin"></a>
+                <a href="#https://rutube.ru/video/a620a1231fd78f51c83b2803b6fafab0/" class="social wa"></a>
             </div>
         </div>
         </div>
@@ -252,71 +252,92 @@
     <!-- Modal for Team Application -->
     <div class="modal" id="teamModal">
         <button class="close-btn" aria-label="Закрыть">&times;</button>
-        <h2>Заявка в команду</h2>
+        <h3>Заявка в команду</h3>
         <p class="instructions">*Необходимо заполнить для подачи в команду:</p>
-        <form id="teamForm" novalidate>
-            <div class="form-group">
-                <label for="team-fio">ФИО</label>
-                <input type="text" id="team-fio" name="fio" required placeholder="Введите ФИО">
-            </div>
-            <div class="form-group">
-                <label for="team-phone">Номер телефона</label>
-                <input type="tel" id="team-phone" name="phone" required placeholder="Введите номер в формате +7 (999) 999-99-99" pattern="^\+?\d[\d\s\-\(\)]{9,}$">
-            </div>
-            <div class="form-group">
-                <label for="team-previous">Чем занимался раньше?</label>
-                <textarea id="team-previous" name="previous" required placeholder="Опишите ваш предыдущий опыт"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="team-rank">Есть ли спортивный разряд?</label>
-                <input type="text" id="team-rank" name="rank" placeholder="Ответьте Да/Нет или укажите разряд" required>
-            </div>
-            <div class="form-group">
-                <label for="team-age">Возраст</label>
-                <input type="number" id="team-age" name="age" required min="16" max="100" placeholder="Введите ваш возраст">
-            </div>
-            <div class="form-group">
-                <label for="team-university">ВУЗ</label>
-                <input type="text" id="team-university" name="university" required placeholder="Укажите ваш ВУЗ (если есть)">
-            </div>
-            <button type="submit" class="submit">Отправить</button>
-        </form>
-    </div>
-
-    <!-- Modal for Performance Request -->
-    <div class="modal" id="performanceModal">
-        <button class="close-btn" aria-label="Закрыть">&times;</button>
-        <h2>Заказать выступление</h2>
-        <p class="instructions">*Необходимо заполнить для подачи на заказ:</p>
         <form id="performanceForm" novalidate>
-            <div class="form-group">
-                <label for="perf-fio">ФИО</label>
-                <input type="text" id="perf-fio" name="fio" required placeholder="Введите ФИО">
+        <div class="form-columns">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="perf-fio">ФИО</label>
+                    <input class="text-all" type="text" id="perf-fio" name="fio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-phone">Номер телефона</label>
+                    <input class="text-all" type="tel" id="perf-phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-previous">Чем занимался раньше?</label>
+                    <textarea id="perf-previous" name="previous" required></textarea>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="perf-phone">Номер телефона</label>
-                <input type="tel" id="perf-phone" name="phone" required placeholder="Введите номер в формате +7 (999) 999-99-99" pattern="^\+?\d[\d\s\-\(\)]{9,}$">
+
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="perf-rank">Есть ли спортивный разряд?</label>
+                    <input class="text-all" type="text" id="perf-rank" name="rank" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-age">Возраст</label>
+                    <input class="text-all" type="number" id="perf-age" name="age" required min="16" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-university">ВУЗ</label>
+                    <input class="text-all" type="text" id="perf-university" name="university" required>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="perf-previous">Чем занимался раньше?</label>
-                <textarea id="perf-previous" name="previous" required placeholder="Опишите ваш предыдущий опыт"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="perf-rank">Есть ли спортивный разряд?</label>
-                <input type="text" id="perf-rank" name="rank" placeholder="Ответьте Да/Нет или укажите разряд" required>
-            </div>
-            <div class="form-group">
-                <label for="perf-age">Возраст</label>
-                <input type="number" id="perf-age" name="age" required min="16" max="100" placeholder="Введите ваш возраст">
-            </div>
-            <div class="form-group">
-                <label for="perf-university">ВУЗ</label>
-                <input type="text" id="perf-university" name="university" required placeholder="Укажите ваш ВУЗ (если есть)">
-            </div>
-            <button type="submit" class="submit">Отправить</button>
-        </form>
+        </div><button type="submit" class="submit">Отправить</button>
+    </form>
     </div>
 
+<!-- Modal for Performance Request -->
+<div class="modal" id="performanceModal">
+    <button class="close-btn" aria-label="Закрыть">&times;</button>
+
+    <h3>Заказать выступление</h3>
+    <p class="instructions text-all">*Необходимо заполнить для подачи на заказ:</p>
+
+    <form id="performanceForm" novalidate>
+        <div class="form-columns">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="perf-fio">ФИО</label>
+                    <input class="text-all" type="text" id="perf-fio" name="fio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-phone">Номер телефона</label>
+                    <input class="text-all" type="tel" id="perf-phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-previous">Опишите задачи</label>
+                    <textarea id="perf-previous" name="previous" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="perf-rank">Место</label>
+                    <input class="text-all" type="text" id="perf-rank" name="rank" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-age">Время</label>
+                    <input class="text-all" type="number" id="perf-age" name="age" required min="16" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="perf-university">Организация</label>
+                    <input class="text-all" type="text" id="perf-university" name="university" required>
+                </div>
+            </div>
+        </div><button type="submit" class="submit">Отправить</button>
+    </form>
+</div>
 
     
 
@@ -332,10 +353,10 @@
                     </div>
                     <div class="footer-colum footer-right">
                        <div class="socials">
-                            <a href="#" class="social insta"></a>
-                            <a href="#" class="social tg"></a>
-                            <a href="#" class="social pin"></a>
-                            <a href="#" class="social wa"></a>
+                            <a href="#https://max.ru/" class="social insta"></a>
+                            <a href="#https://vk.com/needles_cheer" class="social tg"></a>
+                            <a href="#tel:+79991234567" class="social pin"></a>
+                            <a href="#https://rutube.ru/video/a620a1231fd78f51c83b2803b6fafab0/" class="social wa"></a>
                         </div>
                         <p class="footer-text address-tablet">Адрес: Санкт-Петербург, <br class="br-mobile">ул. Больая Морская, д. 18</p>
                         <a class="footer-text hover" href="Privacy-policy.html">Конфиденциальная информация_документ</a>
