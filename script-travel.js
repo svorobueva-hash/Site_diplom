@@ -56,12 +56,11 @@ const countries = [
         year: '2022',
         activity: 'Рим',
         position: { top: '35%', left: '49%' },
-        mainImage: '/images/china-main.jpg',
+        mainImage: '/images/Italy2.jpg',
         images: [
-            '/images/china-1.jpg',
-            '/images/china-2.jpg',
-            '/images/china-3.jpg',
-            '/images/china-4.jpg'
+            '/images/Italy1.jpg',
+            '/images/Italy3.jpg',
+            '/images/Italy4.jpg',
         ],
         texts: {
             leftTop: 'Команда Нидлс посетила XII Международные соревнования в Нанкине по чирлидингу и чир спорту.<br>Среди множества стран двойка нашей команды представляла дисциплину чир-хип-хоп, где заняла первое место.',

@@ -639,8 +639,8 @@
 
     /* 4. вертикальное слово */
     .marquee-word {
-        height: 144px;
-        font-size: 26px;
+        height: 148px;
+        font-size: 25px;
         padding: 0 0px;
     }
 
@@ -669,5 +669,11 @@
 
     .slide-label-bottom {
         bottom: 8px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 560px) {
+    h1{
+        font-size: 80px;
     }
 }
