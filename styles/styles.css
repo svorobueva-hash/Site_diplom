@@ -78,7 +78,7 @@ body {
     width: 368px;
     height: 112px;
 
-    background-image: url('/images/logo.png');
+    background-image: url('/images/logo3.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -91,7 +91,7 @@ body {
 }
 
 .logo:active {
-    background-image: url('/images/logo3.png');
+    background-image: url('/images/logo.png');
 }
 
 /* обычные иконки */
