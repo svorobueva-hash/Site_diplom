@@ -96,7 +96,7 @@ body {
 
 /* обычные иконки */
 .insta {
-    background-image: url('/images/max.png');
+    background-image: url('/images/telega.png');
 }
 
 .tg {
@@ -113,7 +113,7 @@ body {
 
 /* hover */
 .insta:hover {
-    background-image: url('/images/max_hover.png');
+    background-image: url('/images/telega2.png');
 }
 
 .tg:hover {
@@ -129,7 +129,7 @@ body {
 }
 
 .insta:active {
-    background-image: url('/images/max_active.png');
+    background-image: url('/images/telega3.png');
 }
 
 .tg:active {
